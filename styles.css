@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #C9CCD1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: #363636;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+.navbar li {
+    float: left;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 20px;
+}
+
+.main {
+    margin: 20px
+}
+
+.photos {
+    width: 200px;
+}
+
+#home {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9HWuHs7RYgUCAT8Gw0vcCjQLKHN6cY7HfRg&s");
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    text-shadow: 5px 4px 8px white;
+    font-weight: bolder;
+}
+
+footer {
+    background-color: #172d44;
+    color: white;
+    height: 80px;
+}
+
+.text-highlight {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+p {
+    font-size: 18px;
+}
