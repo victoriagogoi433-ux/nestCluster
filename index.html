@@ -14,22 +14,18 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#activities">Activities</a></li>
+            <li><a href="#events-notices">Notices</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="apply.html" class="shining-nav-item">Apply Now</a></li>
         </ul>
     </nav>
 
-
     <div class="main">
-        <!-- Home Section -->
-
         <section id="home">
             <h1 class="text-highlight">Welcome to the NEST Cluster at IIT Guwahati</h1>
             <p class="text-highlight">This platform highlights our initiatives, activities and academic engagement.</p>
         </section>
-
-        <!-- About Section -->
 
         <section id="about">
             <h2>About</h2>
@@ -39,8 +35,6 @@
                 a regional "nerve center" to accelerate research, skill development, and industrial growth across the
                 eight northeastern states.</p>
         </section>
-
-        <!-- Activities Section -->
 
         <section id="activities">
             <h2>Activities</h2>
@@ -68,21 +62,124 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <section id="events-notices">
+            <h2 style="color: #176338;">Events & Notices</h2>
+            <p class="section-subtitle">Stay updated with the latest happenings at NEST.</p>
+
+            <div class="notice-viewport">
+                <ul class="notice-list-modern" id="scrolling-notices">
+                    <li>
+                        <span class="notice-date">10 Apr 2026</span>
+                        <span class="notice-text">Scholarship for NE Students — Apply Now</span>
+                    </li>
+                    <li>
+                        <span class="notice-date">18 Apr 2026</span>
+                        <span class="notice-text">Startup Pitch Day — IIT Guwahati Campus</span>
+                    </li>
+                    <li>
+                        <span class="notice-date">25 Apr 2026</span>
+                        <span class="notice-text">Workshop: Digital Archiving of Handloom Patterns</span>
+                    </li>
+                    <li>
+                        <span class="notice-date">05 May 2026</span>
+                        <span class="notice-text">Mentorship Programme — Summer Batch Registration</span>
+                    </li>
+                    <li>
+                        <span class="notice-date">28 Feb 2026</span>
+                        <span class="notice-text">NEST Hackathon 2026 — Registrations Open</span>
+                    </li>
+                    <li>
+                        <span class="notice-date">15 Mar 2026</span>
+                        <span class="notice-text">Tech Talk: IoT for Flood Monitoring in Assam</span>
+                    </li>
+                </ul>
+            </div>
+            <a href="notices.html" class="primary-outline-btn">View All Notices</a>
+        </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: nestcluster@example.com</p>
+            <h2 style="color: #176338;">Get Involved</h2>
+            <p class="section-subtitle">Whether you are a student, educator, startup or partner — we would love to hear from you.</p>
+            
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <label>Name <span style="color:red;">*</span></label>
+                    <input type="text" name="name" required placeholder="Your Name" />
+
+                    <label>Email <span style="color:red;">*</span></label>
+                    <input type="email" name="email" required placeholder="Your Email" />
+
+                    <label>Role</label>
+                    <select name="role" required>
+                        <option value="">Select your role</option>
+                        <option>Student</option>
+                        <option>Educator</option>
+                        <option>NGO / Community</option>
+                        <option>Startup</option>
+                        <option>Government</option>
+                    </select>
+
+                    <label>Message <span style="color:red;">*</span></label>
+                    <textarea name="message" rows="4" required placeholder="Tell us how we can collaborate..."></textarea>
+
+                    <button type="submit" class="primary-btn">Send Message</button>
+                    <p id="contact-success" class="contact-success" style="display:none;">
+                        Thank you! We will get back to you soon.
+                    </p>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p>📧 nest@iitg.ac.in</p>
+                    <p>📍 NEST Cluster Office, IIT Guwahati, Assam 781039</p>
+                    <p>📞 +91-361-258-XXXX</p>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-buttons">
+                        <a href="#" class="chip">Twitter</a>
+                        <a href="#" class="chip">LinkedIn</a>
+                        <a href="#" class="chip">YouTube</a>
+                        <a href="#" class="chip">Instagram</a>
+                    </div>
+
+                    <div class="contact-note">
+                        NEST welcomes collaboration from across India and the world. Whether you want to volunteer, sponsor a hackathon, or contribute research — every effort helps build a brighter future for North-East India.
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
-    </div>
-</section>
 
     <footer>
         <p>NEST Cluster, IIT Guwahati</p>
-        <p>© IIT Guwahati, 2025</p>
+        <p>© IIT Guwahati, 2026</p>
     </footer>
+
+    <script>
+        // Form Logic
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            document.getElementById('contact-success').style.display = 'block';
+            event.target.reset();
+        }
+
+        // Scroll Logic
+        const noticeList = document.getElementById('scrolling-notices');
+        let scrollPos = 0;
+
+        function scrollNotices() {
+            scrollPos++;
+            if (scrollPos >= noticeList.firstElementChild.offsetHeight) {
+                noticeList.appendChild(noticeList.firstElementChild);
+                scrollPos = 0;
+            }
+            noticeList.style.transform = `translateY(-${scrollPos}px)`;
+            requestAnimationFrame(scrollNotices);
+        }
+        
+        // Start scrolling after 1 second
+        setTimeout(scrollNotices, 1000);
+    </script>
 </body>
 
 </html>
-
