@@ -1,3 +1,4 @@
+/* --- ORIGINAL THEME --- */
 body {
     margin: 0;
     padding: 0;
@@ -38,6 +39,11 @@ h1 {
     font-size: 50px;
 }
 
+.main {
+    margin: 20px
+}
+
+/* --- CARDS --- */
 .card-container {
     display: flex;
     justify-content: center;
@@ -54,10 +60,6 @@ h1 {
     margin: 20px;
 }
 
-.main {
-    margin: 20px
-}
-
 .photos {
     width: 200px;
 }
@@ -69,17 +71,24 @@ h1 {
     height: 400px;
     text-shadow: 5px 4px 8px white;
     font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer {
     background-color: #172d44;
     color: white;
-    height: 80px;
+    padding: 15px 0;
+    margin-top: 40px;
 }
 
 .text-highlight {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 5px 15px;
 }
 
 section {
@@ -90,9 +99,9 @@ p {
     font-size: 18px;
 }
 
-/* Styling for the Nav Tab */
+/* --- SHINING BUTTON --- */
 .shining-nav-item {
-    background: linear-gradient(90deg, #ff4b2b, #ff416c); /* Bright color to stand out */
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
     color: white !important;
     padding: 8px 15px !important;
     border-radius: 20px;
@@ -101,9 +110,9 @@ p {
     overflow: hidden;
     display: inline-block;
     box-shadow: 0 0 10px rgba(255, 75, 43, 0.5);
+    margin-top: 5px;
 }
 
-/* The Shining Animation */
 .shining-nav-item::after {
     content: "";
     position: absolute;
@@ -122,86 +131,131 @@ p {
     100% { left: 150%; }
 }
 
-/* Styling for the Apply Page Content */
-.importance-box {
-    background: #f4f7f6;
-    padding: 20px;
-    border-left: 5px solid #ff4b2b;
-    margin: 20px 0;
+/* --- SCROLLING NOTICE BOARD --- */
+#events-notices {
+    padding: 60px 20px;
 }
 
-.final-apply-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
+.section-subtitle {
+    color: #5b6b5b;
+    margin-bottom: 25px;
 }
 
-.final-apply-btn:hover {
-    background-color: #218838;
-}
-/* Gallery Layout */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-}
-
-.gallery-item {
-    position: relative;
+.notice-viewport {
+    max-width: 800px;
+    height: 220px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+.notice-list-modern {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Hover Zoom Effect */
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Overlay & Download Button */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.notice-list-modern li {
     display: flex;
-    justify-content: center;
+    padding: 18px 25px;
+    border-bottom: 1px solid #f0f0f0;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-.download-btn {
-    background-color: #ffffff;
-    color: #333;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
+.notice-date {
+    min-width: 100px;
     font-weight: bold;
+    color: #f28a1a;
+    font-size: 14px;
+    text-align: left;
+}
+
+.notice-text {
+    flex: 1;
+    text-align: left;
+    color: #333;
+    margin-left: 20px;
+}
+
+.primary-outline-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 2px solid #176338;
+    color: #176338;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-outline-btn:hover {
+    background: #176338;
+    color: white;
+}
+
+/* --- MODERN CONTACT GRID --- */
+.contact-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 15px;
+    background: #176338;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-info h3 { margin-top: 0; }
+
+.social-buttons { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
+
+.chip {
+    padding: 8px 15px;
+    background: #363636;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
     font-size: 14px;
 }
 
-.download-btn:hover {
-    background-color: #ff416c;
-    color: white;
+.contact-note {
+    background: #dee2e6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+    border-left: 5px solid #176338;
+    color: #444;
 }
