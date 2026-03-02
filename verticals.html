@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Verticals | NESt</title>
+    <link href="output.css" rel ="stylesheet" />
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-500 mb-4">
+            <a href="/" class="hover:text-blue-600">Home</a> > <span class="font-semibold text-gray-800">Verticals</span>
+        </nav>
+
+        
+        <h1 class="text-4xl font-bold mb-6 text-gray-900">Our Verticals</h1>
+
+        
+        <p class="text-lg text-gray-700 mb-12">
+            NEST operates through four focused innovation verticals. Each vertical is structured to address a key strategic opportunity specific to the North Eastern Region. Select any vertical below to explore further.
+        </p>
+
+        
+        <div class="space-y-6">
+            
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                <div onclick="toggleVertical(1)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-blue-600">01</span>
+                        <div>
+                            <h2 class="text-xl font-semibold">Innovation Hub on Grassroot Technologies</h2>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Grassroot</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Rural Tech</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Traditional Knowledge</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="arrow-1" class="text-2xl text-gray-400 transition-transform">▼</span>
+                </div>
+                <div id="content-1" class="hidden p-6 bg-gray-50 border-t border-gray-100">
+                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Scientific validation and advancement of traditional and rural technologies</p>
+                    <h3 class="font-bold text-lg mb-2">Overview</h3>
+                    <p class="mb-4">The Innovation Hub on Grassroot Technologies connects traditional knowledge systems with modern scientific approaches. Villages across the Northeast hold generations of practical solutions in construction, agriculture, and resource management. This vertical identifies, validates, refines, and scales these solutions to create broader regional and national impact.</p>
+                    
+                    <h3 class="font-bold text-lg mb-2">Priority Areas</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-1">
+                        <li><strong>Flood Resilient Construction Systems:</strong> Developing and validating construction methods suitable for flood-prone conditions in the Northeast.</li>
+                        <li><strong>Sustainable Rural Housing:</strong> Creating cost-effective, climate-responsive housing solutions using local and natural materials.</li>
+                        <li><strong>Smart Irrigation Systems:</strong> Strengthening traditional water management practices with sensor-supported and low-technology smart systems.</li>
+                        <li><strong>Village Level Processing Technologies:</strong> Establishing rural-scale solutions for food processing, agro-product value addition, and post-harvest management.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
+                    <p class="mb-4 text-gray-700">Researchers, rural innovators, agricultural institutions, state departments, and grassroots entrepreneurs.</p>
+                    
+                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
+                </div>
+            </div>
+
+            
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                <div onclick="toggleVertical(2)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-blue-600">02</span>
+                        <div>
+                            <h2 class="text-xl font-semibold">Technology Hub for Semiconductor and Artificial Intelligence</h2>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Semiconductor</span>
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">AI</span>
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Deep Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="arrow-2" class="text-2xl text-gray-400 transition-transform">▼</span>
+                </div>
+                <div id="content-2" class="hidden p-6 bg-gray-50 border-t border-gray-100">
+                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Advancing emerging technologies aligned with national priorities</p>
+                    <h3 class="font-bold text-lg mb-2">Overview</h3>
+                    <p class="mb-4">Aligned with India's national semiconductor mission and the growing demand for AI expertise, this vertical positions the Northeast as an active contributor to advanced technology development. Operating within IIT Guwahati's research ecosystem, the hub enables students, researchers, and startups to participate in deep technology innovation.</p>
+                    
+                    <h3 class="font-bold text-lg mb-2">Key Focus Areas</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-1">
+                        <li><strong>Semiconductor Design and Simulation:</strong> Providing training and research in chip design, VLSI systems, and semiconductor simulation tools.</li>
+                        <li><strong>AI-Enabled Automation:</strong> Building AI-based solutions for regional sectors including agriculture, healthcare, and disaster response.</li>
+                        <li><strong>Machine Learning Applications:</strong> Conducting applied machine learning research tailored to the unique, data-limited environments of the Northeast.</li>
+                        <li><strong>Embedded Systems Innovation:</strong> Developing IoT and embedded system solutions suitable for rural and semi-urban deployment.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
+                    <p class="mb-4 text-gray-700">Engineering students, deep tech startups, research scholars, and industry partners.</p>
+                    
+                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
+                </div>
+            </div>
+
+            
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                <div onclick="toggleVertical(3)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-blue-600">03</span>
+                        <div>
+                            <h2 class="text-xl font-semibold">Centre of Excellence for Bamboo Based Technology</h2>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Bamboo</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Sustainability</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Green Industry</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="arrow-3" class="text-2xl text-gray-400 transition-transform">▼</span>
+                </div>
+                <div id="content-3" class="hidden p-6 bg-gray-50 border-t border-gray-100">
+                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Leveraging the Northeast ecological advantage in bamboo resources</p>
+                    <h3 class="font-bold text-lg mb-2">Overview</h3>
+                    <p class="mb-4">The Northeast accounts for more than 65 percent of India's bamboo resources. However, only a limited portion of its economic value is currently realized within the region. This Centre of Excellence transforms bamboo from a raw material into a high-value, engineered resource, creating sustainable livelihoods and environmentally responsible industries.</p>
+                    
+                    <h3 class="font-bold text-lg mb-2">Focus Areas</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-1">
+                        <li><strong>Engineered Bamboo Materials:</strong> Research and development of laminated bamboo composite panels and structural bamboo products for construction and manufacturing.</li>
+                        <li><strong>Sustainable Construction Components:</strong> Developing bamboo-based alternatives to conventional materials such as concrete and steel for resilient and affordable structures.</li>
+                        <li><strong>Bamboo Based Industrial Products:</strong> Designing furniture, textiles, packaging materials, and consumer goods derived from processed bamboo.</li>
+                        <li><strong>Product Standardization and Certification:</strong> Establishing quality standards and certification systems to enable bamboo products to access national and international markets.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
+                    <p class="mb-4 text-gray-700">Forest-based enterprises, MSMEs, construction companies, designers, and state forest departments.</p>
+                    
+                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
+                </div>
+            </div>
+
+            
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                <div onclick="toggleVertical(4)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-blue-600">04</span>
+                        <div>
+                            <h2 class="text-xl font-semibold">Skill Development and Innovation Centre for Biodegradable and Eco Friendly Plastics</h2>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Bioplastics</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Circular Economy</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Green Skills</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="arrow-4" class="text-2xl text-gray-400 transition-transform">▼</span>
+                </div>
+                <div id="content-4" class="hidden p-6 bg-gray-50 border-t border-gray-100">
+                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Promoting circular economy practices and sustainable material innovation</p>
+                    <h3 class="font-bold text-lg mb-2">Overview</h3>
+                    <p class="mb-4">As global industries move away from petroleum-based plastics, the Northeast, with its biodiversity and agricultural waste resources, is well-positioned to lead in biopolymer development. This vertical strengthens research capacity and builds a skilled workforce in sustainable materials science.</p>
+                    
+                    <h3 class="font-bold text-lg mb-2">Focus Areas</h3>
+                    <ul class="list-disc pl-5 mb-4 space-y-1">
+                        <li><strong>Biopolymer Research:</strong> Developing and testing bio-based polymers derived from regional agricultural and forest feedstocks.</li>
+                        <li><strong>Sustainable Packaging Solutions:</strong> Creating commercially viable, environmentally responsible alternatives to single-use plastic packaging.</li>
+                        <li><strong>Waste-to-Resource Technologies:</strong> Converting agricultural and organic waste into raw material for sustainable production.</li>
+                        <li><strong>Green Manufacturing Skills:</strong> Delivering vocational and technical training programs in sustainable materials production for regional youth.</li>
+                    </ul>
+
+                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
+                    <p class="mb-4 text-gray-700">Chemistry researchers, packaging industry professionals, agri-entrepreneurs, skill seekers, and green startups.</p>
+                    
+                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
