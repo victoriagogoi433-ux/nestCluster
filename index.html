@@ -1,69 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEST Cluster IIT Guwahati</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEST Cluster | North Eastern Science &amp; Technology Cluster — IIT Guwahati</title>
+  <meta name="description" content="North Eastern Science & Technology (NEST) Cluster at IIT Guwahati — bridging grassroots innovation with cutting-edge science across the seven sister states."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#events-notices">Notices</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="verticals.html">Our Verticals</a></li>
-            <li><a href="disaster.html">Disaster</a></li>
-            <li><a href="apply.html" class="shining-nav-item">Apply Now</a></li>
-        </ul>
-    </nav>
 
-    <div class="main">
-        <section id="home">
-            <h1 class="text-highlight">Welcome to the NEST Cluster at IIT Guwahati</h1>
-            <p class="text-highlight">This platform highlights our initiatives, activities and academic engagement.</p>
-        </section>
+<header class="navbar" id="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="images/logo.jpg" alt="NEST Cluster Logo" class="navbar-logo"/>
+    <div class="navbar-title">
+      <strong>NEST Cluster</strong>
+      <span>IIT Guwahati</span>
+    </div>
+  </a>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>The North Eastern Science & Technology (NEST) Cluster is a strategic innovation initiative established at
-                IIT Guwahati. <br>Formally inaugurated on November 2, 2025, by Shri Jyotiraditya M. Scindia, Hon'ble
-                Minister for Development of North Eastern Region (DONER), Government of India. <br>The cluster serves as
-                a regional "nerve center" to accelerate research, skill development, and industrial growth across the
-                eight northeastern states.</p>
-        </section>
+  <nav class="navbar-links">
+    <div class="dropdown">
+      <a href="about.html" class="dropbtn">About ▾</a>
+      <div class="dropdown-content">
+        <a href="cluster_formation.html">Cluster Formation</a>
+        <a href="cluster_activities.html">Cluster Activities</a>
+        <a href="logo.html">About logo</a>
+      </div>
+    </div>
+    <a href="verticals.html">Verticals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="#impact">Impact</a>
+    <a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a>
+    <a href="nest-hackathon.html">Hackathon</a>
+    <a href="#programs">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <section id="activities">
-            <h2>Activities</h2>
-            <div class="card-container">
-                <div class="card">
-                    <p class="date">15 November, 2025</p>
-                    <h3>Research Workshop</h3>
-                    <p>A hands-on workshop focusing on research methodologies and academic writing for students.</p>
-                    <img src="Images/research.jpg" class="photos">
-                </div>
+  <div class="navbar-actions">
+    <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" class="navbar-ministry"/>
+    <a href="apply.html" class="navbar-apply">Apply Now</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-                <div class="card">
-                    <p class="date">17 December, 2025</p>
-                    <h3>Tech Talk Series</h3>
-                    <p> An expert lecture series featuring industry and academic professionals.</p>
-                    <img src="Images/tech-talk.jpg" class="photos">
-                </div>
+<div class="mobile-menu" id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(13,51,32,0.98); z-index:199; padding:24px; border-bottom:1px solid rgba(201,153,42,0.2);">
+  <nav style="display:flex; flex-direction:column; gap:18px;">
+    <a href="about.html"        style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">About</a>
+    <a href="verticals.html"    style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Verticals</a>
+    <a href="nest-hackathon.html" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Hackathon</a>
+    <a href="disaster.html"    style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Disaster Management</a>
+    <a href="nest-startup-ecosystem.html"    style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Startup Ecosystem</a>
+    <a href="#programs"     style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Programs</a>
+    <a href="#contact"      style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Contact</a>
+  </nav>
+</div>
 
-                <div class="card">
-                    <p class="date">3 January, 2026</p>
-                    <h3>Innovation Hackathon</h3>
-                    <p>A collaborative hackathon encouraging innovative solutions to real-world problems.</p>
-                    <img src="Images/hackathon.jpg" class="photos">
-                </div>
-            </div>
-        </section>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-glow hero-glow--1"></div>
+  <div class="hero-glow hero-glow--2"></div>
 
+  <div class="hero-content container">
+    <!-- Left Text -->
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Inaugurated by Union Minister Jyotiraditya M. Scindia
+      </div>
+
+      <h1>
+        North Eastern<br/>
+        <em>Science &amp; Technology</em><br/>
+        Cluster
+      </h1>
+
+      <p class="hero-sub">
+        Transforming local knowledge into global solutions — bridging grassroots innovation with cutting-edge science at IIT Guwahati.
+      </p>
+
+      <div class="hero-actions">
+        <a href="verticals.html" class="btn btn--primary">
+          Explore Verticals
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="about.html" class="btn btn--outline">Learn About NEST</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">₹22.98 Cr</div>
+          <div class="hero-stat-lbl">Total Investment</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-lbl">Core Verticals</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">7</div>
+          <div class="hero-stat-lbl">Sister States</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">2024</div>
+          <div class="hero-stat-lbl">Year Established</div>
+        </div>
+      </div>
+    </div>
+        
+
+
+    <div class="hero-image-panel">
+      <img src="images/hero-bg.jpg" alt="Rural women felicitated at NEST Cluster inauguration by Union Minister Jyotiraditya M. Scindia" class="hero-inauguration-img"/>
+      <div class="hero-img-caption">
+        <strong>📸 Inauguration Ceremony, IIT Guwahati</strong>
+        Rural women from Kamrup district felicitated for completing training in Biodegradable Toy Manufacturing using Industry 4.0 technologies.
+      </div>
+    </div>
+    
         <section id="events-notices">
             <h2 style="color: #176338;">Events & Notices</h2>
             <p class="section-subtitle">Stay updated with the latest happenings at NEST.</p>
@@ -99,90 +163,459 @@
             <a href="notices.html" class="primary-outline-btn">View All Notices</a>
         </section>
 
-        <section id="contact">
-            <h2 style="color: #176338;">Get Involved</h2>
-            <p class="section-subtitle">Whether you are a student, educator, startup or partner — we would love to hear from you.</p>
-            
-            <div class="contact-grid">
-                <form class="contact-form" onsubmit="handleContactSubmit(event)">
-                    <label>Name <span style="color:red;">*</span></label>
-                    <input type="text" name="name" required placeholder="Your Name" />
+  </div>
+</section>
 
-                    <label>Email <span style="color:red;">*</span></label>
-                    <input type="email" name="email" required placeholder="Your Email" />
 
-                    <label>Role</label>
-                    <select name="role" required>
-                        <option value="">Select your role</option>
-                        <option>Student</option>
-                        <option>Educator</option>
-                        <option>NGO / Community</option>
-                        <option>Startup</option>
-                        <option>Government</option>
-                    </select>
+<div class="ministry-bar">
+  <div class="container">
+    <img src="images/banner.png" alt="Ministry of Development of North Eastern Region"/>
+    <div class="ministry-bar-text">
+      Supported by <strong>Ministry of Development of North Eastern Region (DoNER), Govt. of India</strong><br/>
+      Hosted at <strong>Indian Institute of Technology Guwahati</strong>
+    </div>
+  </div>
+</div>
 
-                    <label>Message <span style="color:red;">*</span></label>
-                    <textarea name="message" rows="4" required placeholder="Tell us how we can collaborate..."></textarea>
-
-                    <button type="submit" class="primary-btn">Send Message</button>
-                    <p id="contact-success" class="contact-success" style="display:none;">
-                        Thank you! We will get back to you soon.
-                    </p>
-                </form>
-
-                <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <p>📧 nest@iitg.ac.in</p>
-                    <p>📍 NEST Cluster Office, IIT Guwahati, Assam 781039</p>
-                    <p>📞 +91-361-258-XXXX</p>
-
-                    <h3>Follow Us</h3>
-                    <div class="social-buttons">
-                        <a href="#" class="chip">Twitter</a>
-                        <a href="#" class="chip">LinkedIn</a>
-                        <a href="#" class="chip">YouTube</a>
-                        <a href="#" class="chip">Instagram</a>
-                    </div>
-
-                    <div class="contact-note">
-                        NEST welcomes collaboration from across India and the world. Whether you want to volunteer, sponsor a hackathon, or contribute research — every effort helps build a brighter future for North-East India.
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="section section--cream" id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">About the NEST Cluster</h2>
     </div>
 
-    <footer>
-        <p>NEST Cluster, IIT Guwahati</p>
-        <p>© IIT Guwahati, 2026</p>
-    </footer>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="images/about.jpg" alt="Union Minister Jyotiraditya M. Scindia inaugurating the NEST Cluster at IIT Guwahati with a ribbon-cutting ceremony"/>
+      </div>
 
-    <script>
-        // Form Logic
-        function handleContactSubmit(event) {
-            event.preventDefault();
-            document.getElementById('contact-success').style.display = 'block';
-            event.target.reset();
-        }
+      <div class="about-text reveal">
+        <p>
+          The <strong>North Eastern Science &amp; Technology (NEST) Cluster</strong> is a flagship innovation hub established at IIT Guwahati with an investment of ₹22.98 crore, supported by the Ministry of Development of North Eastern Region (DoNER), Government of India.
+        </p>
+        <p>
+          NEST serves as the <strong>nerve centre of the Northeast's innovation ecosystem</strong> — a place where centuries of indigenous wisdom meet the rigour of modern science. It translates local knowledge, traditional crafts, and regional resources into scalable, globally competitive technologies.
+        </p>
+        <p>
+          By uniting academia, industry, government, and grassroots communities, NEST builds a sustainable innovation future aligned with India's <em>Act East Policy</em> — spanning all seven sister states of Northeast India.
+        </p>
+        <div class="about-highlight">
+          <div>
+            <div class="about-highlight-amount">₹22.98 Cr</div>
+            <div class="about-highlight-label">Government of India Investment (DoNER)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Scroll Logic
-        const noticeList = document.getElementById('scrolling-notices');
-        let scrollPos = 0;
+<section class="section section--dark" id="inauguration" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Official Launch</div>
+      <h2 class="section-title section-title--light">Inauguration &amp; Impact</h2>
+    </div>
 
-        function scrollNotices() {
-            scrollPos++;
-            if (scrollPos >= noticeList.firstElementChild.offsetHeight) {
-                noticeList.appendChild(noticeList.firstElementChild);
-                scrollPos = 0;
-            }
-            noticeList.style.transform = `translateY(-${scrollPos}px)`;
-            requestAnimationFrame(scrollNotices);
-        }
-        
-        // Start scrolling after 1 second
-        setTimeout(scrollNotices, 1000);
-    </script>
+    <div class="inauguration-grid">
+      <div class="reveal">
+        <img src="images/research.jpg" alt="Union Minister Jyotiraditya M. Scindia addressing the NEST Cluster inauguration at IIT Guwahati" class="inauguration-img"/>
+      </div>
+
+      <div class="inauguration-quotes">
+        <div class="quote-card reveal">
+          <blockquote>
+            The NEST Cluster will act as the nerve centre of the Northeast's innovation ecosystem, turning local ideas into scalable global solutions.
+          </blockquote>
+          <cite>— NEST Cluster Mission Statement, IIT Guwahati</cite>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>
+            Rural women from Kamrup district were felicitated for completing training in biodegradable toy manufacturing using Industry 4.0 technologies. The NEST Cluster logo, designed by these women, was unveiled — symbolising innovation rooted in empowerment.
+          </blockquote>
+          <cite>— NEST Inauguration Ceremony</cite>
+        </div>
+
+        <div class="reveal" style="background:rgba(201,153,42,0.08); border:1px solid rgba(201,153,42,0.2); border-radius:14px; padding:22px 26px; margin-top:4px;">
+          <p style="font-size:14px; color:rgba(253,250,245,0.7); line-height:1.75;">
+            Inaugurated by <strong style="color:var(--white);">Union Minister Jyotiraditya M. Scindia</strong> (Minister for Communications &amp; Development of North Eastern Region) as part of a <strong style="color:var(--gold-light);">₹635 crore</strong> development drive across Assam — reinforcing India's <strong style="color:var(--white);">Act East Policy</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="disaster.html">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Network Architecture</div>
+      <h2 class="section-title">Hub &amp; Spoke Model</h2>
+      <p class="section-desc">IIT Guwahati serves as the central Hub, connecting a network of NITs, state universities, industrial federations, and skill departments across all Northeast states.</p>
+    </div>
+
+    <div class="hub-layout">
+      <div class="reveal">
+        <img src="images/impact.jpg" alt="Hub and Spoke model diagram showing IIT Guwahati as host institute connected to NITs, state universities, and industrial federations across Northeast India" class="hub-img"/>
+      </div>
+
+      <div class="hub-points">
+        <div class="hub-point reveal">
+          <div class="hub-point-icon">🏛️</div>
+          <div class="hub-point-text">
+            <h4>Host Institute — IIT Guwahati</h4>
+            <p>Central hub for research, training, IP management, and industry coordination across the Northeast.</p>
+          </div>
+        </div>
+        <div class="hub-point reveal">
+          <div class="hub-point-icon">🎓</div>
+          <div class="hub-point-text">
+            <h4>NITs Across 7 States</h4>
+            <p>Agartala, Silchar, Sikkim, Arunachal Pradesh, Meghalaya, Nagaland, and Manipur — all serving as regional spokes.</p>
+          </div>
+        </div>
+        <div class="hub-point reveal">
+          <div class="hub-point-icon">🏫</div>
+          <div class="hub-point-text">
+            <h4>State Universities Network</h4>
+            <p>Universities of Assam, Meghalaya, Mizoram, Manipur, Nagaland, Sikkim, Tripura, and Arunachal Pradesh.</p>
+          </div>
+        </div>
+        <div class="hub-point reveal">
+          <div class="hub-point-icon">🏭</div>
+          <div class="hub-point-text">
+            <h4>Industry &amp; Skill Departments</h4>
+            <p>State Industrial Federations, Industrial Departments, and Education &amp; Skilling Departments of all NE states.</p>
+          </div>
+        </div>
+        <div class="hub-point reveal">
+          <div class="hub-point-icon">🌏</div>
+          <div class="hub-point-text">
+            <h4>DoNER Support</h4>
+            <p>Backed by the Ministry of Development of North Eastern Region — providing funding, policy support, and national linkages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section impact-section" id="impact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label impact-label">Making a Difference</div>
+      <h2 class="section-title impact-title">Our Impact</h2>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-left">
+        <div class="impact-stats-grid">
+          <div class="impact-stat-card reveal">
+            <div class="impact-stat-num">₹635 Cr</div>
+            <div class="impact-stat-lbl">Total projects launched alongside NEST in Assam</div>
+          </div>
+          <div class="impact-stat-card reveal">
+            <div class="impact-stat-num">3,200</div>
+            <div class="impact-stat-lbl">Students to visit Northeast under NE-SPARKS scheme</div>
+          </div>
+          <div class="impact-stat-card reveal">
+            <div class="impact-stat-num">800</div>
+            <div class="impact-stat-lbl">NE students gaining experience at ISRO &amp; national labs</div>
+          </div>
+          <div class="impact-stat-card reveal">
+            <div class="impact-stat-num">7</div>
+            <div class="impact-stat-lbl">Sister states served by the NEST ecosystem</div>
+          </div>
+        </div>
+
+        <div class="impact-inaug-note reveal">
+          <p><strong>Inauguration:</strong> The NEST Cluster was inaugurated by Union Minister <strong>Jyotiraditya M. Scindia</strong> (Minister for Communications &amp; Development of North Eastern Region) as part of a ₹635 crore development drive in Assam, reinforcing the government's commitment to India's <strong>Act East Policy</strong>.</p>
+        </div>
+      </div>
+
+      <div class="impact-right">
+        <div class="impact-quote-card reveal">
+          <blockquote>
+            The NEST Cluster will act as the nerve centre of the Northeast's innovation ecosystem, turning local ideas into scalable global solutions.
+          </blockquote>
+          <cite>— NEST Cluster Mission Statement, IIT Guwahati</cite>
+        </div>
+
+        <div class="impact-quote-card reveal">
+          <blockquote>
+            Rural women from Kamrup district were felicitated for completing training in biodegradable toy manufacturing using Industry 4.0 technologies. The NEST Cluster logo, designed by these women, was unveiled — symbolising innovation rooted in empowerment.
+          </blockquote>
+          <cite>— NEST Community Inclusion Programme</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--cream" id="community">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">People First</div>
+      <h2 class="section-title">Community &amp; Inclusion</h2>
+      <p class="section-desc">NEST was built for the people of Northeast India. Every programme has community empowerment at its heart.</p>
+    </div>
+
+    <div class="community-grid">
+      <div class="community-card reveal">
+        <img src="images/icon1.png" alt="Sustainability icon" class="community-card-icon"/>
+        <h3>Women Empowerment &amp; Grassroots Training</h3>
+        <p>Rural women from Kamrup district completed training in biodegradable toy manufacturing using Industry 4.0 technologies. As a symbol of ownership, these women designed the official NEST Cluster logo, unveiled at the inauguration ceremony.</p>
+        <div class="community-tags">
+          <span class="community-tag">Women in STEM</span>
+          <span class="community-tag">Industry 4.0</span>
+          <span class="community-tag">Kamrup District</span>
+        </div>
+      </div>
+
+      <div class="community-card reveal">
+        <img src="images/icon2.png" alt="Community icon" class="community-card-icon"/>
+        <h3>NE-SPARKS &amp; Youth Exchange</h3>
+        <p>Under DoNER's NE-SPARKS and Ashtalakshmi Darshan programmes, 3,200 students from across India will visit the Northeast. Simultaneously, 800 students from NE states gain hands-on scientific experience at ISRO and premier national institutions.</p>
+        <div class="community-tags">
+          <span class="community-tag">NE-SPARKS</span>
+          <span class="community-tag">ISRO Partnership</span>
+          <span class="community-tag">800 Students</span>
+        </div>
+      </div>
+
+      <div class="community-card reveal">
+        <img src="images/icon1.png" alt="Research icon" class="community-card-icon"/>
+        <h3>Research Showcased at Exhibition</h3>
+        <p>At the NEST technology exhibition, researchers demonstrated breakthroughs in 6G communication systems, biodegradable polymers, bamboo tissue culture, and low-field MRI systems designed for affordable rural healthcare.</p>
+        <div class="community-tags">
+          <span class="community-tag">6G Comms</span>
+          <span class="community-tag">Low-Field MRI</span>
+          <span class="community-tag">Bamboo Tech</span>
+        </div>
+      </div>
+
+      <div class="community-card reveal">
+        <img src="images/icon2.png" alt="Policy icon" class="community-card-icon"/>
+        <h3>Act East Policy Alignment</h3>
+        <p>NEST directly supports India's Act East Policy by turning the Northeast into a bridge between India and Southeast Asia — through R&D collaboration, export-oriented manufacturing, and cross-border knowledge exchange.</p>
+        <div class="community-tags">
+          <span class="community-tag">Act East Policy</span>
+          <span class="community-tag">Export Markets</span>
+          <span class="community-tag">ASEAN Linkages</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="programs">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Training &amp; Skill Development</div>
+      <h2 class="section-title">Skill Programmes</h2>
+      <p class="section-desc">Structured, hands-on programmes combining technical depth with cultural context — preparing participants to lead in a rapidly evolving economy.</p>
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card pc-1 reveal">
+        <div class="program-card-top">🎋</div>
+        <div class="program-card-body">
+          <span class="tag">Bamboo Technology</span>
+          <h3>Bamboo Product Engineering</h3>
+          <p>From tissue culture to composite panels — end-to-end training in bamboo-based manufacturing for construction, furniture, and sustainable packaging.</p>
+        </div>
+      </div>
+
+      <div class="program-card pc-2 reveal">
+        <div class="program-card-top">♻️</div>
+        <div class="program-card-body">
+          <span class="tag">Biodegradable Materials</span>
+          <h3>Eco-Plastic Manufacturing</h3>
+          <p>Industry 4.0-driven production of biodegradable toys, packaging, and consumables using starch-based and polymer composites.</p>
+        </div>
+      </div>
+
+      <div class="program-card pc-3 reveal">
+        <div class="program-card-top">🤖</div>
+        <div class="program-card-body">
+          <span class="tag">AI &amp; Semiconductors</span>
+          <h3>Applied AI for Northeast</h3>
+          <p>Practical machine learning for agriculture, disaster prediction, and healthcare triage — trained on Northeast India-specific datasets.</p>
+        </div>
+      </div>
+
+      <div class="program-card pc-4 reveal">
+        <div class="program-card-top">🌱</div>
+        <div class="program-card-body">
+          <span class="tag">Grassroots Innovation</span>
+          <h3>Innovator Incubation Track</h3>
+          <p>Supporting rural and tribal innovators from idea to prototype — including IP filing, testing, mentorship, and market linkage support.</p>
+        </div>
+      </div>
+
+      <div class="program-card pc-5 reveal">
+        <div class="program-card-top">🏥</div>
+        <div class="program-card-body">
+          <span class="tag">Healthcare Tech</span>
+          <h3>Affordable Medical Devices</h3>
+          <p>Building and deploying low-cost diagnostic devices, including low-field MRI and point-of-care testing systems for remote Northeast clinics.</p>
+        </div>
+      </div>
+
+      <div class="program-card pc-6 reveal">
+        <div class="program-card-top">📡</div>
+        <div class="program-card-body">
+          <span class="tag">Communications</span>
+          <h3>6G &amp; Connectivity</h3>
+          <p>Next-generation wireless communication prototypes designed for the challenging terrain and remote communities of the Northeast.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="section section--dark" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title section-title--light">Contact NEST Cluster</h2>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div>
+        <div class="contact-item reveal">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Address</strong>
+            <p>Student Welfare Centre, IIT Guwahati<br/>North Guwahati, Assam 781039, India</p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-item-icon">🌐</div>
+          <div class="contact-item-text">
+            <strong>Website</strong>
+            <a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-item-icon">🏫</div>
+          <div class="contact-item-text">
+            <strong>Parent Institution</strong>
+            <a href="https://www.iitg.ac.in" target="_blank">Indian Institute of Technology Guwahati</a>
+          </div>
+        </div>
+        <div class="reveal" style="margin-top:32px;">
+          <img src="images/logo.jpg" alt="NEST Cluster Logo" style="width:100px; border-radius:50%; border:3px solid rgba(201,153,42,0.3);"/>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <h3>Send a Message</h3>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest</label>
+            <select id="interest" name="interest">
+              <option value="">Select a vertical or topic...</option>
+              <option>Grassroots Innovation</option>
+              <option>Semiconductors &amp; AI</option>
+              <option>Bamboo-Based Technologies</option>
+              <option>Biodegradable Plastics</option>
+              <option>Skill Programmes</option>
+              <option>Partnership / Collaboration</option>
+              <option>Hub &amp; Spoke Network</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can NEST help you, or how can you contribute?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary form-submit">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="NEST Logo"/>
+          <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
+        </div>
+        <p class="footer-desc">
+          North Eastern Science &amp; Technology Cluster — preserving local wisdom, powering global innovation across the seven sister states of Northeast India.
+        </p>
+        <div style="margin-top:20px;">
+          <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" style="height:36px; opacity:0.5; filter:brightness(0) invert(1);"/>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About NEST</a></li>
+          <li><a href="verticals.html">Core Verticals</a></li>
+          <li><a href="nest-hackathon.html">Hackathon</a></li>
+          <li><a href="disaster.html">Disaster Management</a></li>
+          <li><a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Bamboo Technology</a></li>
+          <li><a href="#programs">Biodegradable Plastics</a></li>
+          <li><a href="#programs">AI &amp; Semiconductors</a></li>
+          <li><a href="#programs">Healthcare Devices</a></li>
+          <li><a href="#programs">6G Communications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
+          <li><a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a></li>
+          <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
+          <li><a href="#contact">Send Message</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved. Supported by DoNER, Govt. of India.</p>
+      <img src="images/banner.png" alt="Ministry logo" class="footer-ministry"/>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
 </body>
-
 </html>
-
