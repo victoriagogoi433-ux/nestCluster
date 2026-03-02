@@ -1,338 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disaster Management Portal - Northeast India | NEST Cluster</title>
-    <link rel="stylesheet" href="disaster.css">
-</head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disaster Management Portal - Northeast India | NEST Cluster</title>
+  <meta name="description" content="Disaster Management Portal for Northeast India - NEST Cluster IIT Guwahati"/>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
 
-    <!--  TOP EMERGENCY BAR -->
-    <div class="top-alert">
-        National Emergency: <a href="tel:112">112</a> |
-        Disaster Helpline: <a href="tel:1070">1070</a> |
-        Ambulance: <a href="tel:108">108</a>
+<header class="navbar" id="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="images/logo.jpg" alt="NEST Cluster Logo" class="navbar-logo"/>
+    <div class="navbar-title">
+      <strong>NEST Cluster</strong>
+      <span>IIT Guwahati</span>
+    </div>
+  </a>
+
+  <nav class="navbar-links">
+    <div class="dropdown">
+      <a href="about.html" class="dropbtn">About ▾</a>
+      <div class="dropdown-content">
+        <a href="cluster_formation.html">Cluster Formation</a>
+        <a href="cluster_activities.html">Cluster Activities</a>
+        <a href="logo.html">About logo</a>
+      </div>
+    </div>
+    <a href="verticals.html">Verticals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="#impact">Impact</a>
+    <a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a>
+    <a href="nest-hackathon.html">Hackathon</a>
+    <a href="#programs">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="navbar-actions">
+    <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" class="navbar-ministry"/>
+    <a href="apply.html" class="navbar-apply">Apply Now</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(13,51,32,0.98); z-index:199; padding:24px; border-bottom:1px solid rgba(201,153,42,0.2);">
+  <nav style="display:flex; flex-direction:column; gap:18px;">
+    <a href="index.html#about" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">About</a>
+    <a href="index.html#verticals" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Verticals</a>
+    <a href="index.html#inauguration" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Inauguration</a>
+    <a href="index.html#hub-model" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Hub Model</a>
+    <a href="index.html#community" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Community</a>
+    <a href="index.html#programs" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Programs</a>
+    <a href="index.html#contact" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Contact</a>
+  </nav>
+</div>
+
+
+<section class="disaster-hero">
+  <div class="container">
+    <h1>Disaster Management Portal</h1>
+    <p class="disaster-hero-sub">Flood | Earthquake | Landslide | Cyclone Risk Monitoring – Northeast India</p>
+    <div class="disaster-hero-buttons">
+      <a href="#states" class="btn btn--primary">View State Risks</a>
+      <a href="#emergency" class="btn btn--outline">Emergency Contacts</a>
+    </div>
+  </div>
+</section>
+
+<!-- TOP EMERGENCY BAR -->
+<div class="top-alert">
+  <div class="container">
+    National Emergency: <a href="tel:112">112</a> |
+    Disaster Helpline: <a href="tel:1070">1070</a> |
+    Ambulance: <a href="tel:108">108</a>
+  </div>
+</div>
+
+<!-- REAL-TIME ALERTS -->
+<section class="section section--cream" id="alerts">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Live Updates</div>
+      <h2 class="section-title">Real-Time Risk Alerts</h2>
+      <p class="section-desc">Last Updated: 28 February 2026 | 4:45 PM</p>
     </div>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
+    <div class="disaster-grid">
+      <div class="disaster-card risk-red reveal">
+        <h3>🔴 Flood Alert – Assam</h3>
+        <p>Brahmaputra water level rising.</p>
+        <p class="risk-status">Status: HIGH RISK</p>
+      </div>
 
-            <img src="logo.jpg" alt="Nest Cluster logo">
+      <div class="disaster-card risk-orange reveal">
+        <h3>🟠 Landslide Warning – Meghalaya</h3>
+        <p>Heavy rainfall in hilly districts.</p>
+        <p class="risk-status">Status: MODERATE RISK</p>
+      </div>
 
-            <h2>NE Disaster Portal</h2>
+      <div class="disaster-card risk-yellow reveal">
+        <h3>🟡 Earthquake Advisory – Northeast Region</h3>
+        <p>Zone V seismic monitoring active.</p>
+        <p class="risk-status">Status: CAUTION</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <ul>
-                <li><a href="#alerts">Alerts</a></li>
-                <li><a href="#states">States</a></li>
-                <li><a href="#disasters">Disasters</a></li>
-                <li><a href="#preparedness">Preparedness</a></li>
-                <li><a href="#emergency">Contacts</a></li>
-                <li><a href="#report">Report</a></li>
-                <li><a href="#innovation">Innovation</a></li>
-            </ul>
+<!-- STATE SECTION -->
+<section class="section section--white" id="states">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Regional Overview</div>
+      <h2 class="section-title">State-wise Disaster Overview</h2>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>Arunachal Pradesh</h3>
+        <p><strong>Major Risk:</strong> Landslides, Earthquakes</p>
+        <p>Seismic Zone V region</p>
+        <p class="innovation-scope">Innovation Scope: Slope monitoring systems</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Assam</h3>
+        <p><strong>Major Risk:</strong> Flood (Brahmaputra Basin)</p>
+        <p>Other Risks: River erosion, Earthquakes</p>
+        <p class="innovation-scope">Innovation Scope: AI flood monitoring, Raised housing</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Manipur</h3>
+        <p><strong>Major Risk:</strong> Earthquake & Landslides</p>
+        <p>Hilly terrain vulnerability</p>
+        <p class="innovation-scope">Innovation Scope: Early warning systems</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Meghalaya</h3>
+        <p><strong>Major Risk:</strong> Landslides</p>
+        <p>High rainfall impact</p>
+        <p class="innovation-scope">Innovation Scope: Rainfall-based prediction models</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Mizoram</h3>
+        <p><strong>Major Risk:</strong> Landslides</p>
+        <p>Steep slopes & soil instability</p>
+        <p class="innovation-scope">Innovation Scope: Terrain stability monitoring</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Nagaland</h3>
+        <p><strong>Major Risk:</strong> Landslides, Forest Fires</p>
+        <p>Climate vulnerability increasing</p>
+        <p class="innovation-scope">Innovation Scope: Fire detection systems</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Tripura</h3>
+        <p><strong>Major Risk:</strong> Cyclone & Flash Floods</p>
+        <p>Border river overflow impact</p>
+        <p class="innovation-scope">Innovation Scope: River sensor networks</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>Sikkim</h3>
+        <p><strong>Major Risk:</strong> GLOF & Earthquakes</p>
+        <p>Glacial lake threats rising</p>
+        <p class="innovation-scope">Innovation Scope: Satellite-based glacier tracking</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAJOR DISASTERS -->
+<section class="section section--dark" id="disasters">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Disaster Categories</div>
+      <h2 class="section-title section-title--light">Major Disaster Types</h2>
+    </div>
+
+    <div class="disaster-layout">
+      <div class="disaster-section reveal">
+        <h3>🌊 Flood</h3>
+        <p>Severe annual flooding especially in Assam and Tripura.</p>
+        <p><strong>Before:</strong> Store water & essentials</p>
+        <p><strong>During:</strong> Move to higher ground</p>
+        <p><strong>After:</strong> Avoid contaminated water</p>
+      </div>
+
+      <div class="disaster-section reveal">
+        <h3>🌋 Earthquake</h3>
+        <p>Entire Northeast falls under Seismic Zones IV and V.</p>
+        <p><strong>During:</strong> Drop, Cover & Hold</p>
+      </div>
+
+      <div class="disaster-section reveal">
+        <h3>⛰️ Landslide</h3>
+        <p>Frequent in hilly states like Arunachal, Mizoram & Meghalaya.</p>
+        <p><strong>Warning Signs:</strong> Cracks, tilting trees</p>
+      </div>
+
+      <div class="disaster-section reveal">
+        <h3>🌀 Cyclone & Storm</h3>
+        <p>Impact mainly in Tripura and lower Assam regions.</p>
+        <p><strong>Before:</strong> Secure loose objects</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREPAREDNESS -->
+<section class="section section--cream" id="preparedness">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Safety First</div>
+      <h2 class="section-title">Preparedness & Safety Guidelines</h2>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🎒 Emergency Kit Checklist</h3>
+        <ul>
+          <li>Drinking Water</li>
+          <li>First Aid Kit</li>
+          <li>Flashlight</li>
+          <li>Important Documents</li>
+        </ul>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🗺️ Evacuation Planning</h3>
+        <p>Identify nearest relief shelters and routes.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>📥 Download Safety Guide</h3>
+        <a href="#" class="btn btn--primary">Download PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY CONTACTS -->
+<section class="section section--white" id="emergency">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Emergency</div>
+      <h2 class="section-title">Emergency Contacts</h2>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>National Emergency</h3>
+        <p>Helpline: <a href="tel:112">112</a></p>
+        <p>Disaster Control Room: <a href="tel:1070">1070</a></p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🔥 Fire Service</h3>
+        <p><a href="tel:101">101</a></p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🚑 Ambulance</h3>
+        <p><a href="tel:108">108</a></p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; margin-bottom: 20px;">State Disaster Management Authorities (SDMA)</h3>
+      <div style="overflow-x: auto;">
+        <table class="sdma-table" style="width: 100%; border-collapse: collapse; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
+          <tr style="background: var(--green-dark); color: var(--white);">
+            <th style="padding: 16px; text-align: left; font-size: 13px;">State</th>
+            <th style="padding: 16px; text-align: left; font-size: 13px;">Helpline</th>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Arunachal Pradesh</td>
+            <td style="padding: 14px 16px;"><a href="tel:8257891310">8257891310</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Assam</td>
+            <td style="padding: 14px 16px;"><a href="tel:03612237219">0361-2237219</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Manipur</td>
+            <td style="padding: 14px 16px;"><a href="tel:03852443441">0385-2443441</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Meghalaya</td>
+            <td style="padding: 14px 16px;"><a href="tel:03642502098">0364-2502098</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Mizoram</td>
+            <td style="padding: 14px 16px;"><a href="tel:03892342520">0389-2342520</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Nagaland</td>
+            <td style="padding: 14px 16px;"><a href="tel:03702291120">0370-2291120</a></td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--cream-dark);">
+            <td style="padding: 14px 16px;">Sikkim</td>
+            <td style="padding: 14px 16px;"><a href="tel:03592201145">03592-201145</a></td>
+          </tr>
+          <tr>
+            <td style="padding: 14px 16px;">Tripura</td>
+            <td style="padding: 14px 16px;"><a href="tel:3812416045">381-2416045</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT SYSTEM -->
+<section class="section section--cream" id="report">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Report Incident</div>
+      <h2 class="section-title">Report a Disaster</h2>
+    </div>
+
+    <div class="disaster-form-card reveal">
+      <form class="report-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" placeholder="Your Name" id="name" required>
         </div>
-    </nav>
 
-    <!--  HERO HEADER  -->
-    <header>
-        <h1>Disaster Management Portal</h1>
-        <p>Flood | Earthquake | Landslide | Cyclone Risk Monitoring – Northeast India</p>
-        <a href="#states" class="btn">View State Risks</a>
-        <a href="#emergency" class="btn">Emergency Contacts</a>
-    </header>
-
-    <!-- REAL-TIME ALERTS -->
-    <section id="alerts">
-        <div class="container">
-            <h2>Live Risk Alerts</h2>
-            <p class="timestamp">Last Updated: 28 February 2026 | 4:45 PM</p>
-
-            <div class="grid">
-                <div class="card risk-red">
-                    <h3>🔴 Flood Alert – Assam</h3>
-                    <p>Brahmaputra water level rising.</p>
-                    <p>Status: HIGH RISK</p>
-                </div>
-
-                <div class="card risk-orange">
-                    <h3>🟠 Landslide Warning – Meghalaya</h3>
-                    <p>Heavy rainfall in hilly districts.</p>
-                    <p>Status: MODERATE RISK</p>
-                </div>
-
-                <div class="card risk-yellow">
-                    <h3>🟡 Earthquake Advisory – Northeast Region</h3>
-                    <p>Zone V seismic monitoring active.</p>
-                    <p>Status: CAUTION</p>
-                </div>
-            </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" placeholder="Location" id="location" required>
         </div>
-    </section>
 
-    <!--   STATE SECTION   -->
-
-    <section id="states">
-        <div class="container">
-            <h2>State-wise Disaster Overview</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Arunachal Pradesh</h3>
-                    <p><strong>Major Risk:</strong> Landslides, Earthquakes</p>
-                    <p>Seismic Zone V region</p>
-                    <p>Innovation Scope: Slope monitoring systems</p>
-                </div>
-
-                <div class="card">
-                    <h3>Assam</h3>
-                    <p><strong>Major Risk:</strong> Flood (Brahmaputra Basin)</p>
-                    <p>Other Risks: River erosion, Earthquakes</p>
-                    <p>Innovation Scope: AI flood monitoring, Raised housing</p>
-                </div>
-
-                <div class="card">
-                    <h3>Manipur</h3>
-                    <p><strong>Major Risk:</strong> Earthquake & Landslides</p>
-                    <p>Hilly terrain vulnerability</p>
-                    <p>Innovation Scope: Early warning systems</p>
-                </div>
-
-                <div class="card">
-                    <h3>Meghalaya</h3>
-                    <p><strong>Major Risk:</strong> Landslides</p>
-                    <p>High rainfall impact</p>
-                    <p>Innovation Scope: Rainfall-based prediction models</p>
-                </div>
-
-                <div class="card">
-                    <h3>Mizoram</h3>
-                    <p><strong>Major Risk:</strong> Landslides</p>
-                    <p>Steep slopes & soil instability</p>
-                    <p>Innovation Scope: Terrain stability monitoring</p>
-                </div>
-
-                <div class="card">
-                    <h3>Nagaland</h3>
-                    <p><strong>Major Risk:</strong> Landslides, Forest Fires</p>
-                    <p>Climate vulnerability increasing</p>
-                    <p>Innovation Scope: Fire detection systems</p>
-                </div>
-
-                <div class="card">
-                    <h3>Tripura</h3>
-                    <p><strong>Major Risk:</strong> Cyclone & Flash Floods</p>
-                    <p>Border river overflow impact</p>
-                    <p>Innovation Scope: River sensor networks</p>
-                </div>
-
-                <div class="card">
-                    <h3>Sikkim</h3>
-                    <p><strong>Major Risk:</strong> GLOF & Earthquakes</p>
-                    <p>Glacial lake threats rising</p>
-                    <p>Innovation Scope: Satellite-based glacier tracking</p>
-                </div>
-
-            </div>
+        <div class="form-group">
+          <label for="file">Attach Photo/Video</label>
+          <input type="file" id="file">
         </div>
-    </section>
 
-    <!--  MAJOR DISASTERS  -->
-
-    <section class="disasters" id="disasters">
-        <h2>Major Disaster Categories</h2>
-
-        <div class="disaster-layout">
-            <div class="disaster-section">
-                <h3>Flood</h3>
-                <p>Severe annual flooding especially in Assam and Tripura.</p>
-                <p><b>Before:</b> Store water & essentials</p>
-                <p><b>During:</b> Move to higher ground</p>
-                <p><b>After:</b> Avoid contaminated water</p>
-            </div>
-
-            <div class="disaster-section">
-                <h3>Earthquake</h3>
-                <p>Entire Northeast falls under Seismic Zones IV and V.</p>
-                <p><b>During:</b> Drop, Cover & Hold</p>
-            </div>
-
-            <div class="disaster-section">
-                <h3>Landslide</h3>
-                <p>Frequent in hilly states like Arunachal, Mizoram & Meghalaya.</p>
-                <p><b>Warning Signs:</b> Cracks, tilting trees</p>
-            </div>
-
-            <div class="disaster-section">
-                <h3>Cyclone & Storm</h3>
-                <p>Impact mainly in Tripura and lower Assam regions.</p>
-                <p><b>Before:</b> Secure loose objects</p>
-            </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea placeholder="Describe the situation" id="description" required></textarea>
         </div>
-    </section>
 
-    <!-- PREPAREDNESS -->
-    <section id="preparedness">
-        <div class="container">
-            <h2>Preparedness & Safety Guidelines</h2>
+        <button type="submit" class="btn btn--primary">Submit Report</button>
+      </form>
+    </div>
+  </div>
+</section>
 
-            <div class="grid">
-                <div class="card">
-                    <h3>Emergency Kit Checklist</h3>
-                    <ul>
-                        <li>Drinking Water</li>
-                        <li>First Aid Kit</li>
-                        <li>Flashlight</li>
-                        <li>Important Documents</li>
-                    </ul>
-                </div>
+<!-- INNOVATION SECTION -->
+<section class="section section--dark" id="innovation">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Technology Solutions</div>
+      <h2 class="section-title section-title--light">Innovation for Disaster Management</h2>
+    </div>
 
-                <div class="card">
-                    <h3>Evacuation Planning</h3>
-                    <p>Identify nearest relief shelters and routes.</p>
-                </div>
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🤖 AI & Sensors</h3>
+        <p>Real-time flood detection and landslide early warning systems.</p>
+      </div>
 
-                <div class="card">
-                    <h3>Download Safety Guide</h3>
-                    <a href="#" class="btn">Download PDF</a>
-                </div>
-            </div>
+      <div class="disaster-card reveal">
+        <h3>🎋 Grassroots Innovation</h3>
+        <p>Bamboo-based flood resistant housing and local rescue technologies.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>♻️ Waste Management</h3>
+        <p>Post-disaster biodegradable waste and debris solutions.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🏆 Hackathons</h3>
+        <p>Youth-led disaster-tech innovation challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="NEST Logo"/>
+          <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
         </div>
-    </section>
-
-    <!-- EMERGENCY SECTION -->
-
-    <section id="emergency">
-        <div class="container">
-            <h2>Emergency Contacts</h2>
-
-            <div class="grid">
-                <div class="card">
-                    <h3>National Emergency</h3>
-                    <p>Helpline: <a href="tel:112">112</a></p>
-                    <p>Disaster Control Room: <a href="tel:1070">1070</a></p>
-                </div>
-
-                <div class="card">
-                    <h3>Fire Service</h3>
-                    <p><a href="tel:101">101</a></p>
-                </div>
-
-                <div class="card">
-                    <h3>Ambulance</h3>
-                    <p><a href="tel:108">108</a></p>
-                </div>
-            </div>
-            <br>
-
-            <h3>State Disaster Management Authorities (SDMA)</h3>
-
-            <table class="sdma-table">
-                <tr>
-                    <th>State</th>
-                    <th>Helpline</th>
-                </tr>
-                <tr>
-                    <td>Arunachal Pradesh</td>
-                    <td><a href="#">8257891310</a></td>
-                </tr>
-                <tr>
-                    <td>Assam</td>
-                    <td><a href="#">0361-2237219</a></td>
-                </tr>
-                <tr>
-                    <td>Manipur</td>
-                    <td><a href="#">0385-2443441</a></td>
-                </tr>
-                <tr>
-                    <td>Meghalaya</td>
-                    <td><a href="#">0364-2502098</a></td>
-                </tr>
-                <tr>
-                    <td>Mizoram</td>
-                    <td><a href="#">0389-2342520</a></td>
-                </tr>
-                <tr>
-                    <td>Nagaland</td>
-                    <td><a href="#">0370-2291120</a></td>
-                </tr>
-                <tr>
-                    <td>Sikkim</td>
-                    <td><a href="#">03592-201145</a></td>
-                </tr>
-                <tr>
-                    <td>Tripura</td>
-                    <td><a href="#">381-2416045</a></td>
-                </tr>
-            </table>
-
+        <p class="footer-desc">
+          North Eastern Science &amp; Technology Cluster — preserving local wisdom, powering global innovation across the seven sister states of Northeast India.
+        </p>
+        <div style="margin-top:20px;">
+          <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" style="height:36px; opacity:0.5; filter:brightness(0) invert(1);"/>
         </div>
-    </section>
+      </div>
 
-    <!--  REPORT SYSTEM -->
-    <section id="report">
-        <div class="container">
-            <h2>Report a Disaster</h2>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About NEST</a></li>
+          <li><a href="verticals.html">Core Verticals</a></li>
+          <li><a href="nest-hackathon.html">Hackathon</a></li>
+          <li><a href="disaster.html">Disaster Management</a></li>
+          <li><a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a></li>
+        </ul>
+      </div>
 
-            <form class="report-form">
-                <label for="name">Full Name</label>
-                <input type="text" placeholder="Your Name" id="name" required>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Bamboo Technology</a></li>
+          <li><a href="#programs">Biodegradable Plastics</a></li>
+          <li><a href="#programs">AI &amp; Semiconductors</a></li>
+          <li><a href="#programs">Healthcare Devices</a></li>
+          <li><a href="#programs">6G Communications</a></li>
+        </ul>
+      </div>
 
-                <label for="location">Location</label>
-                <input type="text" placeholder="Location" id="location" required>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
+          <li><a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a></li>
+          <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
+          <li><a href="#contact">Send Message</a></li>
+        </ul>
+      </div>
+    </div>
 
-                <input type="file">
+    <div class="footer-bottom">
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved. Supported by DoNER, Govt. of India.</p>
+      <img src="images/banner.png" alt="Ministry logo" class="footer-ministry"/>
+    </div>
+  </div>
+</footer>
 
-                <label for="description">Description</label>
-                <textarea placeholder="Describe the situation" id="description" required></textarea>
 
-                <button type="submit" class="btn">Submit Report</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- INNOVATION SECTION -->
-
-    <section id="innovation">
-        <div class="container">
-            <h2>Technology & Innovation for Disaster Management</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>AI & Sensors</h3>
-                    <p>Real-time flood detection and landslide early warning systems.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Grassroots Innovation</h3>
-                    <p>Bamboo-based flood resistant housing and local rescue technologies.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Waste Management</h3>
-                    <p>Post-disaster biodegradable waste and debris solutions.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Hackathons</h3>
-                    <p>Youth-led disaster-tech innovation challenges.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        © 2026 Disaster Management Portal | NEST Cluster Initiative
-    </footer>
+<!-- JavaScript -->
+<script src="main.js"></script>
 
 </body>
-
-
 </html>
-
