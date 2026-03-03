@@ -1,480 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEST Innovation Hackathons | North Eastern Science & Technology Cluster</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* ============================================
-           NEST HACKATHON PAGE - DESIGN SYSTEM
-           Color: Deep Blue #0A1F44 | Forest Green #1E5631
-           Typography: Inter (professional sans-serif)
-           Layout: Max 1200px | Grid/Flexbox | 8px radius
-           ============================================ */
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEST Innovation Hackathons | North Eastern Science & Technology Cluster</title>
+  <meta name="description" content="NEST Innovation Hackathons - Driving Science, Technology & Entrepreneurship in Northeast India"/>
 
-        /* ---------- CSS Variables ---------- */
-        :root {
-            --color-deep-blue: #0A1F44;
-            --color-forest-green: #1E5631;
-            --color-bg-neutral: #F4F6F9;
-            --color-accent-orange: #F4A261;
-            --color-white: #ffffff;
-            --color-gray-100: #f1f5f9;
-            --color-gray-200: #e2e8f0;
-            --color-gray-600: #475569;
-            --color-gray-800: #1e293b;
-            --shadow-subtle: 0 1px 3px rgba(10, 31, 68, 0.06);
-            --shadow-elevated: 0 4px 12px rgba(10, 31, 68, 0.08);
-            --shadow-hover: 0 8px 24px rgba(10, 31, 68, 0.1);
-            --radius: 8px;
-            --transition: 0.25s ease;
-        }
 
-        /* ---------- Reset & Base ---------- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--color-gray-800);
-            background-color: var(--color-bg-neutral);
-            overflow-x: hidden;
-        }
-
-        /* Typography hierarchy */
-        h1 { font-size: clamp(2rem, 4.5vw, 2.75rem); font-weight: 700; }
-        h2 { font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-weight: 600; }
-        h3 { font-size: 1.125rem; font-weight: 600; }
-
-        /* ---------- 1. Hero Section ---------- */
-        .hero {
-            min-height: 65vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 1.5rem 5rem;
-            background: linear-gradient(135deg, var(--color-deep-blue) 0%, var(--color-forest-green) 100%);
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.12);
-            color: var(--color-white);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            color: var(--color-white);
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 2.2vw, 1.125rem);
-            color: rgba(255, 255, 255, 0.92);
-            margin-bottom: 2rem;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: inline-block;
-            background: var(--color-accent-orange);
-            color: var(--color-deep-blue);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.875rem 1.75rem;
-            border-radius: var(--radius);
-            text-decoration: none;
-            box-shadow: var(--shadow-subtle);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        /* ---------- 2. About Hackathons ---------- */
-        .about-section {
-            padding: 5rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-        }
-
-        .about-content h2 {
-            color: var(--color-deep-blue);
-            margin-bottom: 1.25rem;
-        }
-
-        .about-content p {
-            color: var(--color-gray-600);
-            margin-bottom: 1rem;
-        }
-
-        .about-info-box {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-subtle);
-            border-left: 4px solid var(--color-forest-green);
-        }
-
-        .about-info-box h3 {
-            color: var(--color-deep-blue);
-            margin-bottom: 1rem;
-        }
-
-        .about-info-box ul { list-style: none; }
-
-        .about-info-box li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--color-gray-600);
-            font-size: 0.9375rem;
-        }
-
-        .about-info-box li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-forest-green);
-            font-weight: 700;
-        }
-
-        /* ---------- 3. Thematic Focus Areas ---------- */
-        .thematic-section {
-            padding: 5rem 1.5rem;
-            background: var(--color-white);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-
-        .section-header h2 {
-            color: var(--color-deep-blue);
-            margin-bottom: 0.75rem;
-        }
-
-        .section-header p {
-            color: var(--color-gray-600);
-            font-size: 1rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 1024px) {
-            .cards-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            .cards-grid { grid-template-columns: 1fr; }
-        }
-
-        .card {
-            background: var(--color-bg-neutral);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid var(--color-gray-200);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .card-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--color-forest-green);
-            border-radius: var(--radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-            font-size: 1.25rem;
-            color: var(--color-white);
-        }
-
-        .card h3 {
-            color: var(--color-deep-blue);
-            margin-bottom: 0.75rem;
-        }
-
-        .card p {
-            font-size: 0.9375rem;
-            color: var(--color-gray-600);
-            line-height: 1.5;
-        }
-
-        /* ---------- 4. Participation & Eligibility ---------- */
-        .participation-section {
-            padding: 5rem 1.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .participation-section .section-header { margin-bottom: 2.5rem; }
-
-        .checklist-container {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            box-shadow: var(--shadow-subtle);
-        }
-
-        .checklist-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem 1.5rem;
-        }
-
-        @media (max-width: 600px) {
-            .checklist-grid { grid-template-columns: 1fr; }
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.25rem;
-            background: var(--color-gray-100);
-            border-radius: var(--radius);
-            transition: background var(--transition);
-        }
-
-        .checklist-item:hover {
-            background: var(--color-gray-200);
-        }
-
-        .checklist-icon {
-            width: 28px;
-            height: 28px;
-            min-width: 28px;
-            background: var(--color-forest-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            font-size: 0.875rem;
-            font-weight: 700;
-        }
-
-        .checklist-item span {
-            font-weight: 500;
-            color: var(--color-deep-blue);
-        }
-
-        /* ---------- 5. Call to Action Banner ---------- */
-        .cta-banner {
-            background: var(--color-deep-blue);
-            padding: 4rem 1.5rem;
-            text-align: center;
-        }
-
-        .cta-content { max-width: 700px; margin: 0 auto; }
-
-        .cta-banner h2 {
-            color: var(--color-white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-banner p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--color-accent-orange);
-            color: var(--color-deep-blue);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.875rem 2rem;
-            border-radius: var(--radius);
-            text-decoration: none;
-            transition: transform var(--transition), box-shadow var(--transition);
-            box-shadow: var(--shadow-subtle);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        /* ---------- Footer ---------- */
-        .footer-badge {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--color-gray-100);
-            font-size: 0.8125rem;
-            color: var(--color-gray-600);
-        }
-
-        .footer-badge strong { color: var(--color-deep-blue); }
-    </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/jpeg" href="Images/logo.jpg"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <main>
-    <!-- 1. Hero Section -->
-    <section class="hero" aria-label="Page header">
-        <div class="hero-content">
-            <span class="hero-badge">IIT Guwahati • MDoNER & NEC</span>
-            <h1>NEST Innovation Hackathons</h1>
-            <p class="hero-subtitle">Driving Science, Technology & Entrepreneurship in Northeast India</p>
-            <a href="#challenges" class="hero-cta">Explore Challenges</a>
-        </div>
-    </section>
 
-    <!-- 2. About Hackathons -->
-    <section class="about-section">
-        <div class="about-grid">
-            <div class="about-content">
-                <h2>About NEST Hackathons</h2>
-                <p>NEST Hackathons serve as innovation accelerators, bringing together bright minds to tackle real-world challenges unique to the Northeast region. These intensive, time-bound events foster collaboration between students, startups, researchers, and rural innovators.</p>
-                <p>Our hackathons focus on solving regional challenges—from sustainable agriculture and bamboo-based industries to AI-driven solutions and eco-friendly materials. By aligning with NEST's four official technology verticals, we ensure solutions that are both innovative and locally relevant.</p>
-                <p>We actively encourage participation from rural youth, early-stage startups, and academic researchers, creating an inclusive ecosystem where diverse perspectives drive breakthrough innovations.</p>
-            </div>
-            <div class="about-info-box">
-                <h3>Key Highlights</h3>
-                <ul>
-                    <li>Aligned with NEST's four technology verticals</li>
-                    <li>Regional challenge-focused problem statements</li>
-                    <li>Mentorship from IIT Guwahati faculty & industry experts</li>
-                    <li>Government-backed initiative with institutional support</li>
-                    <li>Pathway to incubation and funding opportunities</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<header class="navbar" id="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="Images/logo.jpg" alt="NEST Cluster Logo" class="navbar-logo"/>
+    <div class="navbar-title">
+      <strong>NEST Cluster</strong>
+      <span>IIT Guwahati</span>
+    </div>
+  </a>
 
-    <!-- 3. Thematic Focus Areas -->
-    <section class="thematic-section" id="challenges">
-        <div class="section-header">
-            <h2>Thematic Focus Areas</h2>
-            <p>Our hackathons align with NEST's official technology verticals, driving innovation across critical domains.</p>
-        </div>
-        <div class="cards-grid">
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">🌱</div>
-                <h3>Grassroot Technology Innovation</h3>
-                <p>Rural engineering solutions, community-driven innovation, and locally adaptable technologies for Northeast communities.</p>
-            </article>
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">⚡</div>
-                <h3>AI & Semiconductor Systems</h3>
-                <p>Emerging computing systems, automation, intelligent applications, and semiconductor design for next-gen solutions.</p>
-            </article>
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">🎋</div>
-                <h3>Bamboo-Based Technology</h3>
-                <p>Sustainable materials, value-added manufacturing, and bamboo entrepreneurship aligned with regional resources.</p>
-            </article>
-            <article class="card">
-                <div class="card-icon" aria-hidden="true">♻️</div>
-                <h3>Eco-friendly Plastics</h3>
-                <p>Biodegradable alternatives, green materials innovation, and sustainable packaging solutions for a cleaner future.</p>
-            </article>
-        </div>
-    </section>
+  <nav class="navbar-links">
+    <div class="dropdown">
+      <a href="about.html" class="dropbtn">About ▾</a>
+      <div class="dropdown-content">
+        <a href="cluster_formation.html">Cluster Formation</a>
+        <a href="cluster_activities.html">Cluster Activities</a>
+        <a href="logo.html">About logo</a>
+      </div>
+    </div>
+    <a href="verticals.html">Verticals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="#impact">Impact</a>
+    <a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a>
+    <a href="nest-hackathon.html" class="active">Hackathon</a>
+    <a href="#programs">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- 4. Participation & Eligibility -->
-    <section class="participation-section">
-        <div class="section-header">
-            <h2>Participation & Eligibility</h2>
-            <p>NEST Hackathons welcome diverse participants committed to innovation in Northeast India.</p>
-        </div>
-        <div class="checklist-container">
-            <div class="checklist-grid">
-                <div class="checklist-item">
-                    <div class="checklist-icon">✓</div>
-                    <span>Students (Engineering / Science)</span>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-icon">✓</div>
-                    <span>Startups</span>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-icon">✓</div>
-                    <span>MSMEs</span>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-icon">✓</div>
-                    <span>Researchers</span>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-icon">✓</div>
-                    <span>Rural Innovators</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="navbar-actions">
+    <img src="Images/banner.png" alt="Ministry of Development of North Eastern Region" class="navbar-ministry"/>
+    <a href="apply.html" class="navbar-apply">Apply Now</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <!-- 5. Call to Action -->
-    <section class="cta-banner">
-        <div class="cta-content">
-            <h2>Be Part of Northeast's Innovation Movement</h2>
-            <p>Join NEST Hackathons and contribute to building a technology-driven future for the region.</p>
-            <!-- Replace the href below with your Google Form's "viewform" URL -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4YFFxxqvuJ-Xny1VK8y5ZSwmzbvZJoO8oq5XWSwJPvGpTBA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="cta-button">Register Interest</a>
-        </div>
-    </section>
-    </main>
+<div class="mobile-menu" id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(13,51,32,0.98); z-index:199; padding:24px; border-bottom:1px solid rgba(201,153,42,0.2);">
+  <nav style="display:flex; flex-direction:column; gap:18px;">
+    <a href="index.html#about" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">About</a>
+    <a href="index.html#verticals" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Verticals</a>
+    <a href="index.html#inauguration" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Inauguration</a>
+    <a href="index.html#hub-model" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Hub Model</a>
+    <a href="index.html#community" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Community</a>
+    <a href="index.html#programs" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Programs</a>
+    <a href="index.html#contact" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Contact</a>
+  </nav>
+</div>
 
-    <footer class="footer-badge" role="contentinfo">
-        <strong>North Eastern Science & Technology Cluster (NEST)</strong> — Implemented by IIT Guwahati | Supported by MDoNER & NEC, Government of India
-    </footer>
+<section class="disaster-hero">
+  <div class="container">
+    <h1>NEST Innovation Hackathons</h1>
+    <p class="disaster-hero-sub">Driving Science, Technology & Entrepreneurship in Northeast India</p>
+    <div class="disaster-hero-buttons">
+      <a href="#challenges" class="btn btn--primary">Explore Challenges</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4YFFxxqvuJ-Xny1VK8y5ZSwmzbvZJoO8oqJPvGpT5XWSwBA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream" id="about">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">About NEST Hackathons</div>
+      <h2 class="section-title">Innovation Accelerators for Northeast India</h2>
+      <p class="section-desc">NEST Hackathons serve as innovation accelerators, bringing together bright minds to tackle real-world challenges unique to the Northeast region.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>These intensive, time-bound events foster collaboration between students, startups, researchers, and rural innovators. Our hackathons focus on solving regional challenges—from sustainable agriculture and bamboo-based industries to AI-driven solutions and eco-friendly materials.</p>
+        <p>By aligning with NEST's four official technology verticals, we ensure solutions that are both innovative and locally relevant. We actively encourage participation from rural youth, early-stage startups, and academic researchers, creating an inclusive ecosystem where diverse perspectives drive breakthrough innovations.</p>
+      </div>
+      <div class="about-img-wrap">
+        <div class="disaster-card" style="background: var(--green-dark); border: none; border-left: 4px solid var(--gold);">
+          <h3 style="font-family: 'Syne', sans-serif; color: var(--white); margin-bottom: 16px;">Key Highlights</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="color: rgba(253,250,245,0.8); padding: 8px 0; padding-left: 24px; position: relative;">
+              <span style="position: absolute; left: 0; color: var(--gold);">✓</span>Aligned with NEST's four technology verticals
+            </li>
+            <li style="color: rgba(253,250,245,0.8); padding: 8px 0; padding-left: 24px; position: relative;">
+              <span style="position: absolute; left: 0; color: var(--gold);">✓</span>Regional challenge-focused problem statements
+            </li>
+            <li style="color: rgba(253,250,245,0.8); padding: 8px 0; padding-left: 24px; position: relative;">
+              <span style="position: absolute; left: 0; color: var(--gold);">✓</span>Mentorship from IIT Guwahati faculty & industry experts
+            </li>
+            <li style="color: rgba(253,250,245,0.8); padding: 8px 0; padding-left: 24px; position: relative;">
+              <span style="position: absolute; left: 0; color: var(--gold);">✓</span>Government-backed initiative with institutional support
+            </li>
+            <li style="color: rgba(253,250,245,0.8); padding: 8px 0; padding-left: 24px; position: relative;">
+              <span style="position: absolute; left: 0; color: var(--gold);">✓</span>Pathway to incubation and funding opportunities
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="challenges">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Innovation Focus</div>
+      <h2 class="section-title section-title--light">Thematic Focus Areas</h2>
+      <p class="section-desc section-desc--light">Our hackathons align with NEST's official technology verticals, driving innovation across critical domains.</p>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🌱 Grassroot Technology Innovation</h3>
+        <p>Rural engineering solutions, community-driven innovation, and locally adaptable technologies for Northeast communities.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>⚡ AI & Semiconductor Systems</h3>
+        <p>Emerging computing systems, automation, intelligent applications, and semiconductor design for next-gen solutions.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🎋 Bamboo-Based Technology</h3>
+        <p>Sustainable materials, value-added manufacturing, and bamboo entrepreneurship aligned with regional resources.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>♻️ Eco-friendly Plastics</h3>
+        <p>Biodegradable alternatives, green materials innovation, and sustainable packaging solutions for a cleaner future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="eligibility">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Who Can Participate</div>
+      <h2 class="section-title">Participation & Eligibility</h2>
+      <p class="section-desc">NEST Hackathons welcome diverse participants committed to innovation in Northeast India.</p>
+    </div>
+
+    <div class="disaster-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="disaster-card reveal">
+        <h3>🎓 Students</h3>
+        <p>Engineering and Science students from colleges and universities across the region.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🚀 Startups</h3>
+        <p>Early-stage startups working on innovative solutions for regional challenges.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🏭 MSMEs</h3>
+        <p>Micro, Small and Medium Enterprises looking to innovate and scale their operations.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🔬 Researchers</h3>
+        <p>Academic researchers and scientists working on applied technology solutions.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🌾 Rural Innovators</h3>
+        <p>Grassroots innovators and local entrepreneurs with practical solutions.</p>
+      </div>
+      <div class="disaster-card reveal">
+        <h3>🤝 Collaborators</h3>
+        <p>NGOs, government departments, and industry partners working on regional development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="register">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Join the Movement</div>
+      <h2 class="section-title section-title--light">Be Part of Northeast's Innovation Movement</h2>
+      <p class="section-desc section-desc--light">Join NEST Hackathons and contribute to building a technology-driven future for the region.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4YFFxxqvuJ-Xny1VK8y5ZSwmzbvZJoO8oq5XWSwJPvGpTBA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn btn--primary" style="font-size: 16px; padding: 16px 40px;">
+        Register Interest Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="Images/logo.jpg" alt="NEST Logo"/>
+          <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
+        </div>
+        <p class="footer-desc">
+          North Eastern Science &amp; Technology Cluster — preserving local wisdom, powering global innovation across the seven sister states of Northeast India.
+        </p>
+        <div style="margin-top:20px;">
+          <img src="Images/banner.png" alt="Ministry of Development of North Eastern Region" style="height:36px; opacity:0.5; filter:brightness(0) invert(1);"/>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About NEST</a></li>
+          <li><a href="verticals.html">Core Verticals</a></li>
+          <li><a href="nest-hackathon.html">Hackathon</a></li>
+          <li><a href="disaster.html">Disaster Management</a></li>
+          <li><a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Bamboo Technology</a></li>
+          <li><a href="#programs">Biodegradable Plastics</a></li>
+          <li><a href="#programs">AI &amp; Semiconductors</a></li>
+          <li><a href="#programs">Healthcare Devices</a></li>
+          <li><a href="#programs">6G Communications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
+          <li><a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a></li>
+          <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
+          <li><a href="#contact">Send Message</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved. Supported by DoNER, Govt. of India.</p>
+      <img src="Images/banner.png" alt="Ministry logo" class="footer-ministry"/>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
 </body>
 </html>
+
