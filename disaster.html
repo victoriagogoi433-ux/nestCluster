@@ -8,9 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-
   <link rel="icon" type="image/jpeg" href="Images/logo.jpg"/>
-
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -84,6 +82,7 @@
   </div>
 </div>
 
+<!-- REAL-TIME ALERTS -->
 <section class="section section--cream" id="alerts">
   <div class="container">
     <div class="reveal">
@@ -243,13 +242,12 @@
 
       <div class="disaster-card reveal">
         <h3>📥 Download Safety Guide</h3>
-        <a href="#" class="btn btn--primary">Download PDF</a>
+        <a href="https://aapdamitra.ndma.gov.in/wp-content/uploads/2022/07/pocketbook-do-dont.pdf" class="btn btn--primary" target="_blank">Download PDF</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EMERGENCY CONTACTS -->
 <section class="section section--white" id="emergency">
   <div class="container">
     <div class="reveal">
@@ -321,43 +319,57 @@
   </div>
 </section>
 
-<!-- REPORT SYSTEM -->
 <section class="section section--cream" id="report">
   <div class="container">
     <div class="reveal">
       <div class="section-label">Report Incident</div>
       <h2 class="section-title">Report a Disaster</h2>
+      <p class="section-desc">Help authorities respond quickly by sharing accurate information</p>
     </div>
 
-    <div class="disaster-form-card reveal">
+    <div class="disaster-form-card" style="background: var(--white); border-radius: 18px; padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--cream-dark); max-width: 600px; margin: 40px auto 0;">
+      
       <form class="report-form">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" placeholder="Your Name" id="name" required>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="name" style="display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:8px;">
+            Full Name
+          </label>
+          <input type="text" id="name" placeholder="Your Name" required
+            style="width:100%; padding:14px 18px; border:1px solid var(--cream-dark); border-radius:8px; font-family:'DM Sans', sans-serif; font-size:14px;">
         </div>
 
-        <div class="form-group">
-          <label for="location">Location</label>
-          <input type="text" placeholder="Location" id="location" required>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="location" style="display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:8px;">
+            Location
+          </label>
+          <input type="text" id="location" placeholder="Location" required
+            style="width:100%; padding:14px 18px; border:1px solid var(--cream-dark); border-radius:8px; font-family:'DM Sans', sans-serif; font-size:14px;">
         </div>
 
-        <div class="form-group">
-          <label for="file">Attach Photo/Video</label>
-          <input type="file" id="file">
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="file" style="display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:8px;">
+            Attach Photo/Video
+          </label>
+          <input type="file" id="file"
+            style="width:100%; padding:12px; border:1px solid var(--cream-dark); border-radius:8px; background:white; font-family:'DM Sans', sans-serif; font-size:14px;">
         </div>
 
-        <div class="form-group">
-          <label for="description">Description</label>
-          <textarea placeholder="Describe the situation" id="description" required></textarea>
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="description" style="display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:8px;">
+            Description
+          </label>
+          <textarea id="description" placeholder="Describe the situation" required
+            style="width:100%; padding:14px 18px; border:1px solid var(--cream-dark); border-radius:8px; font-family:'DM Sans', sans-serif; font-size:14px; min-height:120px;"></textarea>
         </div>
 
         <button type="submit" class="btn btn--primary">Submit Report</button>
+
       </form>
     </div>
   </div>
 </section>
 
-<!-- INNOVATION SECTION -->
 <section class="section section--dark" id="innovation">
   <div class="container">
     <div class="reveal">
@@ -446,8 +458,6 @@
   </div>
 </footer>
 
-
-<!-- JavaScript -->
 <script src="main.js"></script>
 
 </body>
