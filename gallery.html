@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internships - NEST Cluster</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | NEST Cluster — IIT Guwahati</title>
+  <meta name="description" content="Photo gallery of events, workshops, hackathons and innovation activities at NEST Cluster, IIT Guwahati."/>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
 
 <header class="navbar" id="navbar">
   <a href="index.html" class="navbar-brand">
@@ -24,16 +30,14 @@
       <div class="dropdown-content">
         <a href="cluster_formation.html">Cluster Formation</a>
         <a href="cluster_activities.html">Cluster Activities</a>
-        <a href="logo.html">About logo</a>
+        <a href="logo.html">About Logo</a>
       </div>
     </div>
     <a href="verticals.html">Verticals</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html" class="active">Gallery</a>
     <a href="disaster.html">Disaster Management</a>
-    <a href="#impact">Impact</a>
-    <a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a>
+    <a href="nest-startup-ecosystem.html">Startup Ecosystem</a>
     <a href="nest-hackathon.html">Hackathon</a>
-    <a href="#programs">Programs</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -46,57 +50,72 @@
   </div>
 </header>
 
-    <div class="main"></div>
+<main>
 
-<section id="gallery">
-    <h2>Photo Gallery</h2>
-    <p>Explore our latest events. Click the download icon to save the high-resolution images.</p>
-    
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="iitg.png" alt="Research Workshop">
-            <div class="overlay">
-                <a href="iitg.png" download="NEST_Research_Workshop.jpg" class="download-btn">
-                   📥 Download
-                </a>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Images/tech-talk.jpg" alt="Tech Talk Series">
-            <div class="overlay">
-                <a href="Images/tech-talk.jpg" download="NEST_Tech_Talk.jpg" class="download-btn">
-                   📥 Download
-                </a>
-            </div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="Images/hackathon.jpg" alt="Innovation Hackathon">
-            <div class="overlay">
-                <a href="Images/hackathon.jpg" download="NEST_Hackathon.jpg" class="download-btn">
-                   📥 Download
-                </a>
-            </div>
-        </div>
+  <section class="disaster-hero">
+    <div class="container">
+      <h1>Photo Gallery</h1>
+      <p class="disaster-hero-sub">
+        Explore our latest workshops, hackathons, research events and innovation activities.
+      </p>
     </div>
-</section>
+  </section>
 
+  <section id="gallery">
+    <div class="container">
+
+      <h2>Recent Events</h2>
+      <p>Click the download button to save high-resolution images.</p>
+
+      <div class="gallery-container">
+
+        <div class="gallery-item">
+          <img src="images/iitg.png" alt="Research Workshop">
+          <div class="overlay">
+            <a href="images/iitg.png" download class="download-btn">
+              Download
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/tech-talk.jpg" alt="Tech Talk Series">
+          <div class="overlay">
+            <a href="images/tech-talk.jpg" download class="download-btn">
+              Download
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/hackathon.jpg" alt="Innovation Hackathon">
+          <div class="overlay">
+            <a href="images/hackathon.jpg" download class="download-btn">
+              Download
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
       <div>
         <div class="footer-brand">
           <img src="images/logo.jpg" alt="NEST Logo"/>
           <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
         </div>
         <p class="footer-desc">
-          North Eastern Science &amp; Technology Cluster — preserving local wisdom, powering global innovation across the seven sister states of Northeast India.
+          North Eastern Science & Technology Cluster — preserving local wisdom,
+          powering global innovation across Northeast India.
         </p>
-        <div style="margin-top:20px;">
-          <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" style="height:36px; opacity:0.5; filter:brightness(0) invert(1);"/>
-        </div>
       </div>
 
       <div class="footer-col">
@@ -106,18 +125,6 @@
           <li><a href="verticals.html">Core Verticals</a></li>
           <li><a href="nest-hackathon.html">Hackathon</a></li>
           <li><a href="disaster.html">Disaster Management</a></li>
-          <li><a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="#programs">Bamboo Technology</a></li>
-          <li><a href="#programs">Biodegradable Plastics</a></li>
-          <li><a href="#programs">AI &amp; Semiconductors</a></li>
-          <li><a href="#programs">Healthcare Devices</a></li>
-          <li><a href="#programs">6G Communications</a></li>
         </ul>
       </div>
 
@@ -125,18 +132,18 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
-          <li><a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a></li>
           <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
-          <li><a href="#contact">Send Message</a></li>
         </ul>
       </div>
+
     </div>
 
     <div class="footer-bottom">
-      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved. Supported by DoNER, Govt. of India.</p>
-      <img src="images/banner.png" alt="Ministry logo" class="footer-ministry"/>
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved.</p>
     </div>
+
   </div>
 </footer>
 
-</body></html>
+</body>
+</html>
