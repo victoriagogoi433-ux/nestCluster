@@ -1,462 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup & Innovation Ecosystem | NEST - North Eastern Science & Technology Cluster</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* ============================================
-           NEST STARTUP ECOSYSTEM PAGE - DESIGN SYSTEM
-           Color: Deep Blue #0A1F44 | Forest Green #1E5631
-           Typography: Inter (professional sans-serif)
-           Layout: Max 1200px | Grid/Flexbox | 8px radius
-           ============================================ */
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEST Startup Ecosystem | North Eastern Science & Technology Cluster — IIT Guwahati</title>
+  <meta name="description" content="NEST Startup & Innovation Ecosystem at IIT Guwahati — transforming research into scalable enterprises across Northeast India."/>
 
-        /* ---------- CSS Variables ---------- */
-        :root {
-            --color-deep-blue: #0A1F44;
-            --color-forest-green: #1E5631;
-            --color-bg-neutral: #F4F6F9;
-            --color-accent-orange: #F4A261;
-            --color-white: #ffffff;
-            --color-gray-100: #f1f5f9;
-            --color-gray-200: #e2e8f0;
-            --color-gray-600: #475569;
-            --color-gray-800: #1e293b;
-            --shadow-subtle: 0 1px 3px rgba(10, 31, 68, 0.06);
-            --shadow-elevated: 0 4px 12px rgba(10, 31, 68, 0.08);
-            --shadow-hover: 0 8px 24px rgba(10, 31, 68, 0.1);
-            --radius: 8px;
-            --transition: 0.25s ease;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 
-        /* ---------- Reset & Base ---------- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg"/>
 
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: var(--color-gray-800);
-            background-color: var(--color-bg-neutral);
-            overflow-x: hidden;
-        }
-
-        /* Typography hierarchy */
-        h1 { font-size: clamp(2rem, 4.5vw, 2.75rem); font-weight: 700; }
-        h2 { font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-weight: 600; }
-        h3 { font-size: 1.125rem; font-weight: 600; }
-
-        /* ---------- 1. Hero Section (Minimal Institutional) ---------- */
-        .hero {
-            min-height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 1.5rem 4rem;
-            background: var(--color-white);
-            border-bottom: 4px solid var(--color-deep-blue);
-        }
-
-        .hero-content { max-width: 720px; margin: 0 auto; }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--color-deep-blue);
-            color: var(--color-white);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            color: var(--color-deep-blue);
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 2.2vw, 1.125rem);
-            color: var(--color-gray-600);
-            max-width: 520px;
-            margin: 0 auto;
-        }
-
-        /* ---------- 2. About Startup Support ---------- */
-        .about-section {
-            padding: 5rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-        }
-
-        .about-content h2 {
-            color: var(--color-deep-blue);
-            margin-bottom: 1.25rem;
-        }
-
-        .about-content p {
-            color: var(--color-gray-600);
-            margin-bottom: 1rem;
-        }
-
-        .about-info-box {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-subtle);
-            border: 1px solid var(--color-gray-200);
-            border-top: 4px solid var(--color-deep-blue);
-        }
-
-        .about-info-box h3 {
-            color: var(--color-deep-blue);
-            margin-bottom: 1rem;
-        }
-
-        .about-info-box ul { list-style: none; }
-
-        .about-info-box li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--color-gray-600);
-            font-size: 0.9375rem;
-        }
-
-        .about-info-box li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--color-deep-blue);
-            font-weight: 700;
-        }
-
-        /* ---------- 3. Startup Support Services ---------- */
-        .services-section {
-            padding: 5rem 1.5rem;
-            background: var(--color-white);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-
-        .section-header h2 {
-            color: var(--color-deep-blue);
-            margin-bottom: 0.75rem;
-        }
-
-        .section-header p {
-            color: var(--color-gray-600);
-            font-size: 1rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 900px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 600px) {
-            .services-grid { grid-template-columns: 1fr; }
-        }
-
-        .service-block {
-            background: var(--color-bg-neutral);
-            border: 1px solid var(--color-gray-200);
-            border-radius: var(--radius);
-            padding: 2rem;
-            transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-        }
-
-        .service-block:hover {
-            border-color: var(--color-deep-blue);
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-4px);
-        }
-
-        .service-block .service-num {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background: var(--color-deep-blue);
-            color: var(--color-white);
-            font-size: 0.875rem;
-            font-weight: 700;
-            border-radius: var(--radius);
-            text-align: center;
-            line-height: 32px;
-            margin-bottom: 1rem;
-        }
-
-        .service-block h3 {
-            color: var(--color-deep-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .service-block p {
-            font-size: 0.9375rem;
-            color: var(--color-gray-600);
-            line-height: 1.5;
-        }
-
-        /* ---------- 4. Internship & Industry Collaboration ---------- */
-        .internship-section {
-            padding: 5rem 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .internship-section .section-header { margin-bottom: 2.5rem; }
-
-        .internship-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        @media (max-width: 600px) {
-            .internship-grid { grid-template-columns: 1fr; }
-        }
-
-        .internship-card {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: 2rem;
-            box-shadow: var(--shadow-subtle);
-            border-left: 4px solid var(--color-forest-green);
-        }
-
-        .internship-card h3 {
-            color: var(--color-deep-blue);
-            margin-bottom: 0.75rem;
-        }
-
-        .internship-card p {
-            font-size: 0.9375rem;
-            color: var(--color-gray-600);
-            line-height: 1.6;
-        }
-
-        .internship-emphasis {
-            background: var(--color-deep-blue);
-            color: var(--color-white);
-            padding: 2rem;
-            border-radius: var(--radius);
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .internship-emphasis p {
-            font-size: 1rem;
-            color: var(--color-white);
-            margin: 0;
-            font-weight: 500;
-        }
-
-        /* ---------- 5. Vision Statement (Quote-style) ---------- */
-        .vision-section {
-            padding: 5rem 1.5rem;
-        }
-
-        .vision-block {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 3rem 2.5rem;
-            background: var(--color-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-subtle);
-            border: 2px solid var(--color-gray-200);
-            position: relative;
-        }
-
-        .vision-block::before {
-            content: '"';
-            position: absolute;
-            top: 1rem;
-            left: 2rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 3.5rem;
-            color: var(--color-deep-blue);
-            opacity: 0.15;
-            line-height: 1;
-        }
-
-        .vision-block p {
-            font-size: clamp(1.125rem, 2vw, 1.25rem);
-            font-weight: 500;
-            color: var(--color-deep-blue);
-            line-height: 1.7;
-            font-style: italic;
-        }
-
-        .vision-block .vision-attribution {
-            margin-top: 1.5rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-forest-green);
-            font-style: normal;
-        }
-
-        /* ---------- Footer ---------- */
-        .footer-badge {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            background: var(--color-gray-100);
-            font-size: 0.8125rem;
-            color: var(--color-gray-600);
-        }
-
-        .footer-badge strong { color: var(--color-deep-blue); }
-    </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-    <main>
-    <!-- 1. Hero Section -->
-    <section class="hero" aria-label="Page header">
-        <div class="hero-content">
-            <span class="hero-badge">IIT Guwahati • MDoNER & NEC</span>
-            <h1>Startup & Innovation Ecosystem</h1>
-            <p class="hero-subtitle">Transforming Research into Scalable Enterprises</p>
-        </div>
-    </section>
 
-    <!-- 2. About Startup Support -->
-    <section class="about-section">
-        <div class="about-grid">
-            <div class="about-content">
-                <h2>About Startup Support</h2>
-                <p>NEST operates on a Hub-and-Spoke model, with IIT Guwahati serving as the central Innovation Hub for the Northeast region. This structure enables coordinated technology transfer, commercialization pathways, and incubation support across the eight states.</p>
-                <p>The Hub facilitates connections between academic research and industry needs, creating clear pathways for technology commercialization. Startups and innovators gain access to institutional resources, lab facilities, and expert mentorship to accelerate their journey from idea to market.</p>
-                <p>Through structured incubation programs and mentorship support, NEST helps early-stage ventures navigate regulatory frameworks, refine business models, and secure market linkages—building a robust entrepreneurship ecosystem rooted in regional strengths.</p>
-            </div>
-            <div class="about-info-box">
-                <h3>Key Pillars</h3>
-                <ul>
-                    <li>Hub-and-Spoke model with IIT Guwahati as Innovation Hub</li>
-                    <li>Technology transfer & commercialization pathways</li>
-                    <li>Incubation & mentorship support</li>
-                    <li>Industry-academia collaboration</li>
-                    <li>Regional ecosystem development</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="images/logo.jpg" alt="NEST Cluster Logo" class="navbar-logo"/>
+    <div class="navbar-title">
+      <strong>NEST Cluster</strong>
+      <span>IIT Guwahati</span>
+    </div>
+  </a>
 
-    <!-- 3. Startup Support Services -->
-    <section class="services-section">
-        <div class="section-header">
-            <h2>Startup Support Services</h2>
-            <p>Comprehensive support to help startups scale from prototype to market-ready solutions.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-block">
-                <span class="service-num">1</span>
-                <h3>Technology Incubation</h3>
-                <p>Dedicated incubation space, infrastructure, and resources for early-stage technology ventures.</p>
-            </div>
-            <div class="service-block">
-                <span class="service-num">2</span>
-                <h3>Prototype Development Support</h3>
-                <p>Access to labs, fabrication facilities, and technical guidance for building and testing prototypes.</p>
-            </div>
-            <div class="service-block">
-                <span class="service-num">3</span>
-                <h3>Industry Mentorship</h3>
-                <p>One-on-one mentorship from industry experts, IIT faculty, and successful entrepreneurs.</p>
-            </div>
-            <div class="service-block">
-                <span class="service-num">4</span>
-                <h3>R&D Collaboration</h3>
-                <p>Partnership opportunities with academic researchers and industry for joint R&D projects.</p>
-            </div>
-            <div class="service-block">
-                <span class="service-num">5</span>
-                <h3>Market Linkage Assistance</h3>
-                <p>Connections to potential customers, distributors, and government procurement channels.</p>
-            </div>
-            <div class="service-block">
-                <span class="service-num">6</span>
-                <h3>Skill Development Programs</h3>
-                <p>Training in entrepreneurship, technical skills, and business development for founders.</p>
-            </div>
-        </div>
-    </section>
+  <nav class="navbar-links">
+    <div class="dropdown">
+      <a href="about.html" class="dropbtn">About ▾</a>
+      <div class="dropdown-content">
+        <a href="cluster_formation.html">Cluster Formation</a>
+        <a href="cluster_activities.html">Cluster Activities</a>
+        <a href="logo.html">About Logo</a>
+      </div>
+    </div>
+    <a href="verticals.html">Verticals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="nest-startup-ecosystem.html">Startup Ecosystem</a>
+    <a href="nest-hackathon.html">Hackathon</a>
+    <a href="#services">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- 4. Internship & Industry Collaboration -->
-    <section class="internship-section">
-        <div class="section-header">
-            <h2>Internship & Industry Collaboration</h2>
-            <p>Bridging academia and industry through experiential learning and real-world exposure.</p>
-        </div>
-        <div class="internship-grid">
-            <div class="internship-card">
-                <h3>Student Internships in Startups</h3>
-                <p>NEST facilitates student placements in portfolio startups and partner companies, offering hands-on experience in technology-driven ventures across the Northeast.</p>
-            </div>
-            <div class="internship-card">
-                <h3>Real-World Exposure</h3>
-                <p>Interns work on live projects, contributing to product development, market research, and operational challenges—gaining insights beyond classroom learning.</p>
-            </div>
-            <div class="internship-card">
-                <h3>Skill-to-Employment Pathway</h3>
-                <p>Structured programs that bridge technical education with industry needs, creating a clear pathway from skill development to meaningful employment.</p>
-            </div>
-            <div class="internship-card">
-                <h3>Regional Entrepreneurship Development</h3>
-                <p>By connecting students with local startups, NEST nurtures the next generation of entrepreneurs rooted in Northeast India's unique opportunities.</p>
-            </div>
-        </div>
-        <div class="internship-emphasis">
-            <p>NEST's internship programs create a talent pipeline that benefits both startups and students—fostering innovation while building employable skills for the region.</p>
-        </div>
-    </section>
+  <div class="navbar-actions">
+    <img src="images/banner.png" alt="Ministry of Development of North Eastern Region" class="navbar-ministry"/>
+    <a href="apply.html" class="navbar-apply">Apply Now</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <!-- 5. Vision Statement -->
-    <section class="vision-section">
-        <blockquote class="vision-block">
-            <p>NEST aims to build a self-sustaining innovation ecosystem across Northeast India by bridging academia, industry, and grassroots entrepreneurship.</p>
-            <p class="vision-attribution">— NEST Vision</p>
-        </blockquote>
-    </section>
-    </main>
 
-    <footer class="footer-badge" role="contentinfo">
-        <strong>North Eastern Science & Technology Cluster (NEST)</strong> — Implemented by IIT Guwahati | Supported by MDoNER & NEC, Government of India
-    </footer>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(13,51,32,0.98); z-index:199; padding:24px; border-bottom:1px solid rgba(201,153,42,0.2);">
+  <nav style="display:flex; flex-direction:column; gap:18px;">
+    <a href="about.html">About</a>
+    <a href="verticals.html">Verticals</a>
+    <a href="nest-hackathon.html">Hackathon</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="nest-startup-ecosystem.html">Startup Ecosystem</a>
+    <a href="#services">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- STARTUP HERO -->
+  <section class="startup-hero">
+    <div class="container">
+      <h1>Startup & Innovation Ecosystem</h1>
+      <p class="startup-hero-sub">
+        Transforming Research into Scalable Enterprises across Northeast India
+      </p>
+
+      <div class="startup-hero-buttons">
+        <a href="apply.html" class="btn btn--primary">Apply Now</a>
+        <a href="#services" class="btn btn--outline">Explore Support</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="disaster-grid">
+
+        <div class="disaster-card">
+          <h3>Hub-and-Spoke Innovation Model</h3>
+          <p>IIT Guwahati serves as the Innovation Hub connecting institutions, startups, and industries across Northeast India.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Technology Commercialization</h3>
+          <p>Structured pathways for research-to-market transfer and enterprise development.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Incubation & Mentorship</h3>
+          <p>Dedicated support, infrastructure, and expert mentoring for early-stage ventures.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="section section--white" id="services">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px;">
+        <h2>Startup Support Services</h2>
+        <p>Comprehensive support from prototype to market.</p>
+      </div>
+
+      <div class="disaster-grid">
+
+        <div class="disaster-card">
+          <h3>Technology Incubation</h3>
+          <p>Dedicated incubation space and infrastructure.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Prototype Development</h3>
+          <p>Access to labs and fabrication facilities.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Industry Mentorship</h3>
+          <p>Guidance from IIT faculty and industry experts.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>R&D Collaboration</h3>
+          <p>Joint research and innovation opportunities.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Market Linkage</h3>
+          <p>Connections to customers and government channels.</p>
+        </div>
+
+        <div class="disaster-card">
+          <h3>Skill Development</h3>
+          <p>Entrepreneurship and business training programs.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VISION -->
+  <section class="section section--dark">
+    <div class="container" style="text-align:center;">
+      <blockquote style="max-width:800px; margin:0 auto; font-size:20px; line-height:1.8; color:rgba(253,250,245,0.8);">
+        “NEST aims to build a self-sustaining innovation ecosystem across Northeast India by bridging academia, industry, and grassroots entrepreneurship.”
+        <br><br>
+        <strong style="color:var(--gold-light);">— NEST Vision</strong>
+      </blockquote>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="NEST Logo"/>
+          <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
+        </div>
+        <p class="footer-desc">
+          North Eastern Science & Technology Cluster — preserving local wisdom, powering global innovation across Northeast India.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About NEST</a></li>
+          <li><a href="verticals.html">Core Verticals</a></li>
+          <li><a href="nest-hackathon.html">Hackathon</a></li>
+          <li><a href="disaster.html">Disaster Management</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
+          <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
