@@ -756,12 +756,68 @@ body {
   }
 }
 
+/* STARTUP HERO = EXACT SAME AS DISASTER */
+
+.startup-hero {
+  background: linear-gradient(135deg, #8b2d10 0%, #b84c27 50%, #7a2208 100%);
+  padding: 140px 48px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.startup-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(253,250,245,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(253,250,245,0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+
+.startup-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.startup-hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.startup-hero-sub {
+  font-size: 18px;
+  color: rgba(253,250,245,0.7);
+  margin-bottom: 32px;
+}
+
+.startup-hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.startup-hero .btn--outline {
+  border-color: rgba(253,250,245,0.4);
+  color: var(--white);
+}
+
+.startup-hero .btn--outline:hover {
+  background: rgba(253,250,245,0.1);
+  border-color: var(--white);
+}
 
 .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
 .program-card { border-radius: 18px; overflow: hidden; border: 1px solid var(--cream-dark); transition: all 0.25s; background: var(--white); }
 .program-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .program-card-top { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
-.pc-1 .program-card-top { background: linear-gradient(135deg, #0d3320, #1f6b41); }
+.pc-1 .program-card-ztop { background: linear-gradient(135deg, #0d3320, #1f6b41); }
 .pc-2 .program-card-top { background: linear-gradient(135deg, #2a1a0d, #7a3f1f); }
 .pc-3 .program-card-top { background: linear-gradient(135deg, #0d1f3d, #1f4a7a); }
 .pc-4 .program-card-top { background: linear-gradient(135deg, #1a0d2e, #4a1f6b); }
