@@ -1,176 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Our Verticals | NESt</title>
-    <link href="output.css" rel ="stylesheet" />
-    <script src="script.js"></script>
+    <meta name="description" content="NEST Cluster Verticals - Innovation Hub on Grassroot Technologies, Semiconductor & AI, Bamboo Based Technology, Biodegradable Plastics"/>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Images/logo.jpg"/>
+
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body>
 
-    <div class="max-w-5xl mx-auto px-6 py-12">
-        <!-- Breadcrumb -->
-        <nav class="text-sm text-gray-500 mb-4">
-            <a href="/" class="hover:text-blue-600">Home</a> > <span class="font-semibold text-gray-800">Verticals</span>
-        </nav>
+<header class="navbar" id="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="Images/logo.jpg" alt="NEST Cluster Logo" class="navbar-logo"/>
+    <div class="navbar-title">
+      <strong>NEST Cluster</strong>
+      <span>IIT Guwahati</span>
+    </div>
+  </a>
 
-        
-        <h1 class="text-4xl font-bold mb-6 text-gray-900">Our Verticals</h1>
+  <nav class="navbar-links">
+    <div class="dropdown">
+      <a href="about.html" class="dropbtn">About ▾</a>
+      <div class="dropdown-content">
+        <a href="cluster_formation.html">Cluster Formation</a>
+        <a href="cluster_activities.html">Cluster Activities</a>
+        <a href="logo.html">About logo</a>
+      </div>
+    </div>
+    <a href="verticals.html">Verticals</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="disaster.html">Disaster Management</a>
+    <a href="#impact">Impact</a>
+    <a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a>
+    <a href="nest-hackathon.html">Hackathon</a>
+    <a href="#programs">Programs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        
-        <p class="text-lg text-gray-700 mb-12">
-            NEST operates through four focused innovation verticals. Each vertical is structured to address a key strategic opportunity specific to the North Eastern Region. Select any vertical below to explore further.
-        </p>
+  <div class="navbar-actions">
+    <img src="Images/banner.png" alt="Ministry of Development of North Eastern Region" class="navbar-ministry"/>
+    <a href="apply.html" class="navbar-apply">Apply Now</a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-        
-        <div class="space-y-6">
-            
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                <div onclick="toggleVertical(1)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl font-bold text-blue-600">01</span>
-                        <div>
-                            <h2 class="text-xl font-semibold">Innovation Hub on Grassroot Technologies</h2>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Grassroot</span>
-                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Rural Tech</span>
-                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Traditional Knowledge</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="arrow-1" class="text-2xl text-gray-400 transition-transform">▼</span>
-                </div>
-                <div id="content-1" class="hidden p-6 bg-gray-50 border-t border-gray-100">
-                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Scientific validation and advancement of traditional and rural technologies</p>
-                    <h3 class="font-bold text-lg mb-2">Overview</h3>
-                    <p class="mb-4">The Innovation Hub on Grassroot Technologies connects traditional knowledge systems with modern scientific approaches. Villages across the Northeast hold generations of practical solutions in construction, agriculture, and resource management. This vertical identifies, validates, refines, and scales these solutions to create broader regional and national impact.</p>
-                    
-                    <h3 class="font-bold text-lg mb-2">Priority Areas</h3>
-                    <ul class="list-disc pl-5 mb-4 space-y-1">
-                        <li><strong>Flood Resilient Construction Systems:</strong> Developing and validating construction methods suitable for flood-prone conditions in the Northeast.</li>
-                        <li><strong>Sustainable Rural Housing:</strong> Creating cost-effective, climate-responsive housing solutions using local and natural materials.</li>
-                        <li><strong>Smart Irrigation Systems:</strong> Strengthening traditional water management practices with sensor-supported and low-technology smart systems.</li>
-                        <li><strong>Village Level Processing Technologies:</strong> Establishing rural-scale solutions for food processing, agro-product value addition, and post-harvest management.</li>
-                    </ul>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" style="display:none; position:fixed; top:72px; left:0; right:0; background:rgba(13,51,32,0.98); z-index:199; padding:24px; border-bottom:1px solid rgba(201,153,42,0.2);">
+  <nav style="display:flex; flex-direction:column; gap:18px;">
+    <a href="index.html#about" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">About</a>
+    <a href="index.html#verticals" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Verticals</a>
+    <a href="index.html#inauguration" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Inauguration</a>
+    <a href="index.html#hub-model" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Hub Model</a>
+    <a href="index.html#community" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Community</a>
+    <a href="index.html#programs" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Programs</a>
+    <a href="index.html#contact" style="color:rgba(253,250,245,0.8); font-size:15px; text-decoration:none;">Contact</a>
+  </nav>
+</div>
 
-                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
-                    <p class="mb-4 text-gray-700">Researchers, rural innovators, agricultural institutions, state departments, and grassroots entrepreneurs.</p>
-                    
-                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
-                </div>
-            </div>
 
-            
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                <div onclick="toggleVertical(2)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl font-bold text-blue-600">02</span>
-                        <div>
-                            <h2 class="text-xl font-semibold">Technology Hub for Semiconductor and Artificial Intelligence</h2>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Semiconductor</span>
-                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">AI</span>
-                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded">Deep Tech</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="arrow-2" class="text-2xl text-gray-400 transition-transform">▼</span>
-                </div>
-                <div id="content-2" class="hidden p-6 bg-gray-50 border-t border-gray-100">
-                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Advancing emerging technologies aligned with national priorities</p>
-                    <h3 class="font-bold text-lg mb-2">Overview</h3>
-                    <p class="mb-4">Aligned with India's national semiconductor mission and the growing demand for AI expertise, this vertical positions the Northeast as an active contributor to advanced technology development. Operating within IIT Guwahati's research ecosystem, the hub enables students, researchers, and startups to participate in deep technology innovation.</p>
-                    
-                    <h3 class="font-bold text-lg mb-2">Key Focus Areas</h3>
-                    <ul class="list-disc pl-5 mb-4 space-y-1">
-                        <li><strong>Semiconductor Design and Simulation:</strong> Providing training and research in chip design, VLSI systems, and semiconductor simulation tools.</li>
-                        <li><strong>AI-Enabled Automation:</strong> Building AI-based solutions for regional sectors including agriculture, healthcare, and disaster response.</li>
-                        <li><strong>Machine Learning Applications:</strong> Conducting applied machine learning research tailored to the unique, data-limited environments of the Northeast.</li>
-                        <li><strong>Embedded Systems Innovation:</strong> Developing IoT and embedded system solutions suitable for rural and semi-urban deployment.</li>
-                    </ul>
+<section class="disaster-hero">
+  <div class="container">
+    <h1>Our Verticals</h1>
+    <p class="disaster-hero-sub">Four Focused Innovation Verticals for the North Eastern Region</p>
+    <div class="disaster-hero-buttons">
+      <a href="#grassroot" class="btn btn--primary">Grassroot Tech</a>
+      <a href="#semiconductor" class="btn btn--outline">AI & Semiconductor</a>
+    </div>
+  </div>
+</section>
 
-                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
-                    <p class="mb-4 text-gray-700">Engineering students, deep tech startups, research scholars, and industry partners.</p>
-                    
-                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
-                </div>
-            </div>
 
-            
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                <div onclick="toggleVertical(3)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl font-bold text-blue-600">03</span>
-                        <div>
-                            <h2 class="text-xl font-semibold">Centre of Excellence for Bamboo Based Technology</h2>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Bamboo</span>
-                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Sustainability</span>
-                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded">Green Industry</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="arrow-3" class="text-2xl text-gray-400 transition-transform">▼</span>
-                </div>
-                <div id="content-3" class="hidden p-6 bg-gray-50 border-t border-gray-100">
-                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Leveraging the Northeast ecological advantage in bamboo resources</p>
-                    <h3 class="font-bold text-lg mb-2">Overview</h3>
-                    <p class="mb-4">The Northeast accounts for more than 65 percent of India's bamboo resources. However, only a limited portion of its economic value is currently realized within the region. This Centre of Excellence transforms bamboo from a raw material into a high-value, engineered resource, creating sustainable livelihoods and environmentally responsible industries.</p>
-                    
-                    <h3 class="font-bold text-lg mb-2">Focus Areas</h3>
-                    <ul class="list-disc pl-5 mb-4 space-y-1">
-                        <li><strong>Engineered Bamboo Materials:</strong> Research and development of laminated bamboo composite panels and structural bamboo products for construction and manufacturing.</li>
-                        <li><strong>Sustainable Construction Components:</strong> Developing bamboo-based alternatives to conventional materials such as concrete and steel for resilient and affordable structures.</li>
-                        <li><strong>Bamboo Based Industrial Products:</strong> Designing furniture, textiles, packaging materials, and consumer goods derived from processed bamboo.</li>
-                        <li><strong>Product Standardization and Certification:</strong> Establishing quality standards and certification systems to enable bamboo products to access national and international markets.</li>
-                    </ul>
-
-                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
-                    <p class="mb-4 text-gray-700">Forest-based enterprises, MSMEs, construction companies, designers, and state forest departments.</p>
-                    
-                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
-                </div>
-            </div>
-
-            
-            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                <div onclick="toggleVertical(4)" class="p-6 flex items-center justify-between cursor-pointer hover:bg-gray-50">
-                    <div class="flex items-center gap-4">
-                        <span class="text-2xl font-bold text-blue-600">04</span>
-                        <div>
-                            <h2 class="text-xl font-semibold">Skill Development and Innovation Centre for Biodegradable and Eco Friendly Plastics</h2>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Bioplastics</span>
-                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Circular Economy</span>
-                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded">Green Skills</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span id="arrow-4" class="text-2xl text-gray-400 transition-transform">▼</span>
-                </div>
-                <div id="content-4" class="hidden p-6 bg-gray-50 border-t border-gray-100">
-                    <p class="text-gray-700 mb-4"><strong>Short:</strong> Promoting circular economy practices and sustainable material innovation</p>
-                    <h3 class="font-bold text-lg mb-2">Overview</h3>
-                    <p class="mb-4">As global industries move away from petroleum-based plastics, the Northeast, with its biodiversity and agricultural waste resources, is well-positioned to lead in biopolymer development. This vertical strengthens research capacity and builds a skilled workforce in sustainable materials science.</p>
-                    
-                    <h3 class="font-bold text-lg mb-2">Focus Areas</h3>
-                    <ul class="list-disc pl-5 mb-4 space-y-1">
-                        <li><strong>Biopolymer Research:</strong> Developing and testing bio-based polymers derived from regional agricultural and forest feedstocks.</li>
-                        <li><strong>Sustainable Packaging Solutions:</strong> Creating commercially viable, environmentally responsible alternatives to single-use plastic packaging.</li>
-                        <li><strong>Waste-to-Resource Technologies:</strong> Converting agricultural and organic waste into raw material for sustainable production.</li>
-                        <li><strong>Green Manufacturing Skills:</strong> Delivering vocational and technical training programs in sustainable materials production for regional youth.</li>
-                    </ul>
-
-                    <h3 class="font-bold text-lg mb-2">Who Can Engage</h3>
-                    <p class="mb-4 text-gray-700">Chemistry researchers, packaging industry professionals, agri-entrepreneurs, skill seekers, and green startups.</p>
-                    
-                    <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">Express Interest ></a>
-                </div>
-            </div>
-        </div>
+<section class="section section--cream" id="grassroot">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Vertical 01</div>
+      <h2 class="section-title">Innovation Hub on Grassroot Technologies</h2>
+      <p class="section-desc">Scientific validation and advancement of traditional and rural technologies</p>
     </div>
 
-    
-</body>
-</html>
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🌱 Flood Resilient Construction</h3>
+        <p>Developing and validating construction methods suitable for flood-prone conditions in the Northeast.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🏠 Sustainable Rural Housing</h3>
+        <p>Creating cost-effective, climate-responsive housing solutions using local and natural materials.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3">💧 Smart Irrigation Systems</h3>
+        <p>Strengthening traditional water management practices with sensor-supported systems.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🌾 Village Level Processing</h3>
+        <p>Establishing rural-scale solutions for food processing, agro-product value addition.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 30px; text-align: center;">
+      <a href="#contact" class="btn btn--primary">Express Interest ></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--white" id="semiconductor">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Vertical 02</div>
+      <h2 class="section-title">Technology Hub for Semiconductor and Artificial Intelligence</h2>
+      <p class="section-desc">Advancing emerging technologies aligned with national priorities</p>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🔬 Semiconductor Design</h3>
+        <p>Providing training and research in chip design, VLSI systems, and semiconductor simulation tools.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🤖 AI-Enabled Automation</h3>
+        <p>Building AI-based solutions for regional sectors including agriculture, healthcare, and disaster response.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🧠 Machine Learning</h3>
+        <p>Conducted applied machine learning research tailored to the unique environments of the Northeast.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>📡 Embedded Systems</h3>
+        <p>Developing IoT and embedded system solutions suitable for rural and semi-urban deployment.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 30px; text-align: center;">
+      <a href="#contact" class="btn btn--primary">Express Interest ></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--dark" id="bamboo">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Vertical 03</div>
+      <h2 class="section-title section-title--light">Centre of Excellence for Bamboo Based Technology</h2>
+      <p class="section-desc" style="color: var(--cream);">Leveraging the Northeast ecological advantage in bamboo resources</p>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+        <h3>🎋 Engineered Bamboo</h3>
+        <p style="color: var(--cream);">Research and development of laminated bamboo composite panels and structural bamboo products.</p>
+      </div>
+
+      <div class="disaster-card reveal" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+        <h3>🏗️ Sustainable Construction</h3>
+        <p style="color: var(--cream);">Developing bamboo-based alternatives to conventional materials for resilient structures.</p>
+      </div>
+
+      <div class="disaster-card reveal" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+        <h3>🪑 Industrial Products</h3>
+        <p style="color: var(--cream);">Designing furniture, textiles, packaging materials from processed bamboo.</p>
+      </div>
+
+      <div class="disaster-card reveal" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+        <h3>✅ Standardization</h3>
+        <p style="color: var(--cream);">Establishing quality standards and certification for national and international markets.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 30px; text-align: center;">
+      <a href="#contact" class="btn btn--primary">Express Interest ></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--cream" id="bioplastics">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Vertical 04</div>
+      <h2 class="section-title">Skill Development and Innovation Centre for Biodegradable and Eco Friendly Plastics</h2>
+      <p class="section-desc">Promoting circular economy practices and sustainable material innovation</p>
+    </div>
+
+    <div class="disaster-grid">
+      <div class="disaster-card reveal">
+        <h3>🧪 Biopolymer Research</h3>
+        <p>Developing and testing bio-based polymers derived from regional agricultural feedstocks.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>📦 Sustainable Packaging</h3>
+        <p>Creating commercially viable, environmentally responsible alternatives to single-use plastic.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>♻️ Waste-to-Resource</h3>
+        <p>Converting agricultural and organic waste into raw material for sustainable production.</p>
+      </div>
+
+      <div class="disaster-card reveal">
+        <h3>🌿 Green Manufacturing</h3>
+        <p>Vocational and technical training programs in sustainable materials production.</p>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top: 30px; text-align: center;">
+      <a href="#contact" class="btn btn--primary">Express Interest ></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--white" id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Get Involved</div>
+      <h2 class="section-title">Express Your Interest</h2>
+      <p class="section-desc">Join us in driving innovation across these verticals</p>
+    </div>
+
+    <div class="disaster-form-card reveal" style="background: var(--white); border-radius: 18px; padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--cream-dark); max-width: 600px; margin: 40px auto 0;">
+      <form class="report-form">
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="name" style="display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Full Name</label>
+          <input type="text" placeholder="Your Name" id="name" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--cream-dark); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="email" style="display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Email</label>
+          <input type="email" placeholder="Your Email" id="email" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--cream-dark); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="vertical" style="display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Interested Vertical</label>
+          <select id="vertical" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--cream-dark); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; background: white;">
+            <option value="">Select a Vertical</option>
+            <option value="grassroot">Grassroot Technologies</option>
+            <option value="semiconductor">Semiconductor & AI</option>
+            <option value="bamboo">Bamboo Based Technology</option>
+            <option value="bioplastics">Biodegradable Plastics</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 20px;">
+          <label for="description" style="display: block; font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px;">Message</label>
+          <textarea placeholder="Tell us about your interest" id="description" required style="width: 100%; padding: 14px 18px; border: 1px solid var(--cream-dark); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 14px; min-height: 120px;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="Images/logo.jpg" alt="NEST Logo"/>
+          <span class="footer-brand-name">NEST Cluster, IIT Guwahati</span>
+        </div>
+        <p class="footer-desc">
+          North Eastern Science &amp; Technology Cluster — preserving local wisdom, powering global innovation across the seven sister states of Northeast India.
+        </p>
+        <div style="margin-top:20px;">
+          <img src="Images/banner.png" alt="Ministry of Development of North Eastern Region" style="height:36px; opacity:0.5; filter:brightness(0) invert(1);"/>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About NEST</a></li>
+          <li><a href="verticals.html">Core Verticals</a></li>
+          <li><a href="nest-hackathon.html">Hackathon</a></li>
+          <li><a href="disaster.html">Disaster Management</a></li>
+          <li><a href="nest-startup-ecosystem.html">Nest Startup Ecosystem</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="#programs">Bamboo Technology</a></li>
+          <li><a href="#programs">Biodegradable Plastics</a></li>
+          <li><a href="#programs">AI &amp; Semiconductors</a></li>
+          <li><a href="#programs">Healthcare Devices</a></li>
+          <li><a href="#programs">6G Communications</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:nest@iitg.ac.in">nest@iitg.ac.in</a></li>
+          <li><a href="https://swc.iitg.ac.in/nest/" target="_blank">swc.iitg.ac.in/nest</a></li>
+          <li><a href="https://www.iitg.ac.in" target="_blank">www.iitg.ac.in</a></li>
+          <li><a href="#contact">Send Message</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 NEST Cluster, IIT Guwahati. All rights reserved. Supported by DoNER, Govt. of India.</p>
+      <img src="Images/banner.png" alt="Ministry logo" class="footer-ministry"/>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="main.js"></script>
