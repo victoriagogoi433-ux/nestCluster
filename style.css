@@ -1,4 +1,3 @@
-/* ─── NEST CLUSTER — MAIN STYLESHEET ─── */
 
 :root {
   --green-dark:  #0d3320;
@@ -68,8 +67,6 @@ body {
 .tag--light { color: rgba(253,250,245,0.6); border-color: rgba(253,250,245,0.2); }
 
 
-
-/* ── BUTTONS ── */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 13px 26px; border-radius: 8px;
@@ -112,12 +109,11 @@ body {
   display: inline-block;
 }
 
-/* Dropdown container */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown menu */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -140,7 +136,7 @@ body {
   background: #f0f0f0;
 }
 
-/* Show on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -168,7 +164,7 @@ body {
   gap: 56px; margin-top: 52px; position: relative; z-index: 1;
 }
 
-/* Stats */
+
 .impact-stats-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
 }
@@ -187,7 +183,6 @@ body {
   font-size: 13px; line-height: 1.55; color: rgba(253,250,245,0.6);
 }
 
-/* Inauguration note */
 .impact-inaug-note {
   margin-top: 18px;
   background: rgba(253,250,245,0.08);
@@ -197,7 +192,7 @@ body {
 }
 .impact-inaug-note strong { color: var(--white); }
 
-/* Quote cards */
+
 .impact-right { display: flex; flex-direction: column; gap: 20px; }
 .impact-quote-card {
   background: rgba(253,250,245,0.08);
@@ -756,7 +751,119 @@ body {
   }
 }
 
-/* STARTUP HERO = EXACT SAME AS DISASTER */
+#gallery {
+  padding: 120px 48px 80px;
+  text-align: center;
+  background: var(--cream);
+}
+
+#gallery h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+#gallery p {
+  font-size: 16px;
+  color: var(--text-mid);
+  margin-bottom: 48px;
+}
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.gallery-item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 51, 32, 0.85),
+    rgba(13, 51, 32, 0.3)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+
+.download-btn {
+  background: var(--gold);
+  color: var(--green-dark);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #gallery {
+    padding: 100px 20px 60px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 .startup-hero {
   background: linear-gradient(135deg, #8b2d10 0%, #b84c27 50%, #7a2208 100%);
